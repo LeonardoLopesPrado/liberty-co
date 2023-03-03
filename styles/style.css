@@ -21,27 +21,39 @@ body {
 }
 
 .banner {
-    background-image: url(../assets/banner.svg);
+    background-image: url(../assets/banner.png);
     background-size: 100vw;
     background-repeat: no-repeat;
     height: 100vh;
     color: white;
 }
 
+.lorem {
+    position: relative;
+    /* margin-top: -10px; */
+}
+
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     background: rgb(0, 0, 0);
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
     font-size: 1.5em;
+    display: flex;
+}
+
+.navbar .container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .navbar .logo {
-    width: 12vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 0.5em;
 }
 
 .navbar .items {
@@ -57,9 +69,87 @@ body {
     list-style-type: none;
 }
 
+.phrases {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    height: 50%;
+    flex-direction: row;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+.phrases h1 {
+    font-size: 4em;
+    width: 70%;
+    margin: 0;
+}
+
+.phrases span {
+    width: 45%;
+    font-size: 1.25em;
+}
+
+.phrases .container {
+    /* width: 50%; */
+    /* margin: auto; */
+    /* align-items: center; */
+    /* flex-flow: row wrap; */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.phrases .container button {
+    box-sizing: border-box;
+    font-size: 1.125em;
+    width: 180px;
+    height: 45px;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #00FFFF;
+    cursor: pointer;
+    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));    */
+    border-radius: 10px;    
+}
+
+.lorem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../assets/line.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+
+.lorem .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lorem .container .text {
+    width: 50%;
+}
+
+.lorem .container img {
+    width: 230px;
+    height: 230px;
+}
+
 @media only screen and (max-width: 768px) {
     .navbar {
         font-size: 1em;
+    }
+    .navbar img {
+        width: 34px;
+        height: 34px;
+        /* gap: 0.5em; */
+    }
+
+    .phrases h1 {
+        font-size: 2em;
     }
 }
 
