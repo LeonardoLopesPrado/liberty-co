@@ -221,3 +221,61 @@ body {
         font-size: 0.5em;
     }
 }
+
+
+/* ---------------------------------------------Planos---------------------------------------------------- */
+.bannerPlanos {
+    background: linear-gradient(101.7deg, #1D476A 0%, #041727 100%);    background-size: 100vw;
+    background-repeat: no-repeat;
+    height: 10vh;
+    color: white;
+    border: solid red;
+}
+.navbarPlanos{
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
+    font-size: 1.5em;
+    display: flex;
+}
+
+
+.navbarPlanos .container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navbarPlanos .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5em;
+}
+
+.navbarPlanos .items {
+    margin: 0;
+    padding: 0;
+}
+
+.navbarPlanos .items {
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.cards{
+    display: flex;
+    height: 1000px;
+    justify-content: space-between;
+    padding: 30% 20% 0 20%;
+    background: linear-gradient(101.7deg, #1D476A 0%, #041727 100%);    background-size: 100vw;
+
+}
+.cards u{
+    font-weight: 400;
+}
