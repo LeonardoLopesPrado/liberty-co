@@ -15,7 +15,7 @@
 .title {
     font-size: 4em;
     width: 70%;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .banner {
@@ -44,6 +44,7 @@
 }
 
 .phrases .container-slogan {
+
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -86,7 +87,7 @@
 }
 
 .how-works-text {
-    width: 600px;
+    width: 80%;
 
 }
 
@@ -95,7 +96,9 @@
 }
 
 .how-works-text p {
-    font-size: 20px;
+    padding-top: 10px;
+    font-size: 25px;
+    width: 800px;
 }
 
 .container-cards {
@@ -108,11 +111,17 @@
 .container-card .card .icon {
     border-radius: 4px;
     position: absolute;
+
     top: 0;
+
     left: 0;
+
     width: 300px;
+
     height: 100%;
+
     background: var(--main-blue);
+
 }
 
 .icon {
@@ -173,31 +182,53 @@
 }
 
 .card .slide.slide2 {
+
     position: relative;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     padding: 20px;
+
     box-sizing: border-box;
+
     transition: .8s;
+
     transform: translateY(-100px);
+
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+
 }
 
 .card:hover .slide.slide2 {
+
     transform: translateY(0);
+
 }
 
 .card .slide.slide2::after {
+
     content: "";
+
     position: absolute;
+
     width: 30px;
+
     height: 4px;
+
     bottom: 15px;
+
     left: 50%;
+
     left: 50%;
+
     transform: translateX(-50%);
+
     background: var(--main-blue);
+
 }
 
 .card .slide.slide2 .content p {
@@ -205,6 +236,7 @@
     padding: 0;
     text-align: center;
     color: var(--ligth-dar);
+    padding-bottom: 25px;
 }
 
 .card .slide.slide2 .content h3 {
@@ -225,8 +257,8 @@
 }
 
 .text-container {
-
     width: 60%;
     text-align: center;
-
+    font-size: 12px;
+    padding-bottom: 30px;
 }
