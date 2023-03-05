@@ -1,4 +1,4 @@
-# ⚖️ LIBERTY CO ⚖️
+# 📚 LIBERTY CO 📚
  A melhor solução para a alavancar produtividade do seu negócio
 
 ## Integrantes: 
