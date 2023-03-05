@@ -8,6 +8,10 @@
    --green-text: #01705C;
 }
 
+body {
+overflow-x: hidden;
+}
+
 * {
     margin: 0;
     padding: 0;
