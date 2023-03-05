@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Share+Tech&display=swap%27');
+
+/* popup */
+.popup {
+    font-family: 'Montserrat';
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
+}
+
+.popup_conteudo {
+    border-radius: 5%;
+    background-color: white;
+    margin: 5% auto;
+    width: 70%;
+    height: 80%;
+    box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.17), 0px 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: abrindoPopup;
+    animation-duration: 0.5s;
+}
+
+.popup_fechar {
+    position: absolute;
+    top: 6vw;
+    right: 17vw;
+    color: black;
+    font-size: 40px;
+    transition: 0.1s;
+}
+
+.popup_fechar:hover {
+    color: #061F36;
+    cursor: pointer;
+    transition: 0.1s;
+    text-decoration: none;
+}
+
+.telaCadastro {
+    margin: 0;
+    display: flex;
+    height: 100%;
+}
+
+.imgCadastro {
+    border-radius: 5% 0% 0% 5%;
+    /* box-shadow: black 0px 0px 10px 0px; */
+    background-image: url('assets/background/banner-cadastro.png');
+    width: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.formularioCadastro {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formularioCadastro h1 {
+    font-family: 'Share Tech';
+    font-weight: 500;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.formularioCadastro input {
+    padding: 3%;
+    width: 330px;
+    margin-top: 10px;
+    font-size: 15px;
+    background-color: #E7E7E7;
+    border: none;
+    border-radius: 10px;
+}
+
+.inputCadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudoCadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.conteudoCadastro p {
+    margin-top: 20px;
+}
+
+.conteudoCadastro a {
+    color: black;
+    cursor: pointer;
+}
+
+.botaoCadastrar {
+    font-family: "Montserrat";
+    background-color: #00d9ff;
+    font-size: 20px;
+    border: none;
+    width: 170px;
+    height: 45px;
+    border-radius: 10px;
+    margin-top: 35px;
+    transition: 0.25s;
+}
+
+.botaoCadastrar:hover {
+    background-color: #008cff;
+    transition: 0.25s;
+    box-shadow: 0px 1px 5px black;
+    cursor: pointer;
+}
+
+#clique_login:hover {
+    cursor: pointer;
+}
+
+@keyframes abrindoPopup {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* popup */
+.popupLogin {
+    font-family: 'Montserrat';
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
+}
+
+.popup_conteudo_login {
+    border-radius: 5%;
+    background-color: white;
+    margin: 5% auto;
+    width: 70%;
+    height: 80%;
+    box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.17), 0px 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: abrindoPopup;
+    animation-duration: 0.5s;
+}
+
+.popup_fechar_login {
+    position: absolute;
+    top: 6vw;
+    right: 17vw;
+    color: black;
+    font-size: 40px;
+    transition: 0.1s;
+}
+
+.popup_fechar_login:hover {
+    color: #061F36;
+    cursor: pointer;
+    transition: 0.1s;
+    text-decoration: none;
+}
+
+.telaLogin {
+    margin: 0;
+    display: flex;
+    height: 100%;
+}
+
+.imgLogin {
+    border-radius: 5% 0% 0% 5%;
+    /* box-shadow: black 0px 0px 10px 0px; */
+    background-image: url('assets/background/banner-login.png');
+    width: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.formularioLogin {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formularioLogin h1 {
+    font-family: 'Share Tech';
+    font-weight: 500;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.formularioLogin input {
+    padding: 3%;
+    width: 330px;
+    margin-top: 10px;
+    font-size: 15px;
+    background-color: #E7E7E7;
+    border: none;
+    border-radius: 10px;
+}
+
+.inputLogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.conteudoLogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.conteudoLogin p {
+    margin-top: 20px;
+}
+
+.conteudoLogin a {
+    color: black;
+    cursor: pointer;
+}
+
+.botaoEntrar {
+    font-family: "Montserrat";
+    background-color: #00d9ff;
+    font-size: 20px;
+    border: none;
+    width: 170px;
+    height: 45px;
+    border-radius: 10px;
+    margin-top: 35px;
+    transition: 0.25s;
+}
+
+.botaoEntrar:hover {
+    background-color: #008cff;
+    transition: 0.25s;
+    box-shadow: 0px 1px 5px black;
+    cursor: pointer;
+}
+
+.conteudoLogin a:hover {
+    cursor: pointer;
+}
+
+@keyframes abrindoPopup {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1;
+    }
+}
