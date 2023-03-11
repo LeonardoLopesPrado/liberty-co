@@ -74,7 +74,7 @@ p{
     justify-self: center;
     width: 800px;
     font-size: 30px;
-
+    font-weight:100;
 }
 .circle {
     position:relative;
@@ -96,9 +96,14 @@ p{
     height: 800px;
     padding-top: 110px;
     justify-content: center;
-    text-align: center;
     color: white;
-
+    text-align: left;
+    font-family: Share Tech;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;    
 }
 .cards .p{
     font-size: 60px;
@@ -122,7 +127,7 @@ p{
 .card1{
     height: 500px;
     margin-right: 60px;
-    width: 250px;
+    width: 280px;
     
     background-color: #1c578815;
     -webkit-border-radius: 19px;
@@ -146,7 +151,7 @@ p{
 }
 .topcard1{
     height: 19px;
-    width: 250px;
+    width: 280px;
     background-color: gray;
     -webkit-border-top-left-radius: 40px;
     -webkit-border-top-right-radius: 40px;
@@ -155,12 +160,24 @@ p{
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
 }
+.botao1{
+    height: 55px;
+    width: 140px;
+    margin: 20px 0 0 50px;
+    background-color: whitesmoke;
+    font-size: 15px;
+    font-weight: 700;
+
+
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+}
 .card2{
     height: 600px;
     width: 300px;
-    margin-right: 60px;
-
-
+    margin-right: 60px;    
+    
     background-color: #0a253b;
     -webkit-border-radius: 19px;
     -webkit-border-bottom-right-radius: 25px;
@@ -184,14 +201,27 @@ p{
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
 }
+.botao2{
+    height: 55px;
+    width: 140px;
+    margin: 20px 0 0 60px;
+    background-color: #00FFFF;
+    font-size: 15px;
+    font-weight: 700;
 
+
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+}
 .card3{
-    height: 500px;
+    height: 550px;
     margin-right: 60px;
-    width: 250px;
+    width: 300px;
+    background-color: #1c578815;
+    justify-self: center;
 
 
-    background-color: #1D476A;
     -webkit-border-radius: 19px;
     -webkit-border-bottom-right-radius: 25px;
     -webkit-border-bottom-left-radius: 25px;
@@ -204,7 +234,7 @@ p{
 }
 .topcard3{
     height: 19px;
-    width: 250px;
+    width: 300px;
     background-color: gray;
     -webkit-border-top-left-radius: 40px;
     -webkit-border-top-right-radius: 40px;
@@ -212,6 +242,19 @@ p{
     -moz-border-radius-topright: 40px;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+}
+.botao3{
+    height: 55px;
+    width: 140px;
+    margin: 20px 0 0 60px;
+    background-color: whitesmoke;
+    font-size: 15px;
+    font-weight: 700;
+
+
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
 }
 .cards u{
     font-weight: 400;
