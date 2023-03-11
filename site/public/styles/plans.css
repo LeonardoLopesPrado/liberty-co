@@ -3,20 +3,26 @@
     margin: 0;
     padding: 0;
 }
-.bannerPlanos {
+p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.background{
     background: linear-gradient(101.7deg, #1D476A 0%, #041727 100%);    background-size: 100vw;
+
+}
+.bannerPlanos {
     background-repeat: no-repeat;
     height: 10vh;
     color: white;
-    border: solid red;
+
 }
 .navbarPlanos{
     background: rgb(0, 0, 0);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
     font-size: 1.5em;
     display: flex;
 }
-
 
 .navbarPlanos .container {
     width: 80%;
@@ -46,15 +52,172 @@
     justify-content: space-between;
     list-style-type: none;
 }
+.Texto{
+    display: grid;
+    justify-content: space-evenly;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding-top: 250px;
+    color: white;
+}
 
+.Texto .p{
+    font-size: 64px;
+    height: 155px;
+    width: 1500px;
+    color: white;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+.Texto .p1{
+    justify-self: center;
+    width: 800px;
+    font-size: 30px;
+
+}
+.circle {
+    position:relative;
+    width: 224px;
+    height: 224px;
+    border-radius: 50%;
+    left:75%;    
+    color: #000000;
+    background: #00FFFF;
+    padding: 20px;
+    font-weight:bolder;
+    font-size: 25px;
+  }
+.circle .p3{
+    font-size: 40px;
+}
 .cards{
     display: flex;
-    height: 1000px;
-    justify-content: space-between;
-    padding: 30% 20% 0 20%;
-    background: linear-gradient(101.7deg, #1D476A 0%, #041727 100%);    background-size: 100vw;
+    height: 800px;
+    padding-top: 110px;
+    justify-content: center;
+    text-align: center;
+    color: white;
 
+}
+.cards .p{
+    font-size: 60px;
+}
+
+.cards .pabsoluto1{
+    position: absolute;
+    /* left: 17.5%;
+    top: 104%; */
+}
+.cards .pabsoluto2{
+    position: absolute;
+    /* left: 45.2%;
+    top: 104%; */
+}
+.cards .pabsoluto3{
+    position: absolute;
+    /* left: 72.5%;
+    top: 104%; */
+}
+.card1{
+    height: 500px;
+    margin-right: 60px;
+    width: 250px;
+    
+    background-color: #1c578815;
+    -webkit-border-radius: 19px;
+    -webkit-border-bottom-right-radius: 25px;
+    -webkit-border-bottom-left-radius: 25px;
+    -moz-border-radius: 19px;
+    -moz-border-radius-bottomright: 25px;
+    -moz-border-radius-bottomleft: 25px;
+    border-radius: 19px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.textcard1{
+    padding: 60px 0 0px 20px;
+}
+.textcard2{
+    padding: 60px 0 0px 20px;
+}
+.textcard3{
+    padding: 60px 0 0px 20px;
+}
+.topcard1{
+    height: 19px;
+    width: 250px;
+    background-color: gray;
+    -webkit-border-top-left-radius: 40px;
+    -webkit-border-top-right-radius: 40px;
+    -moz-border-radius-topleft: 40px;
+    -moz-border-radius-topright: 40px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+.card2{
+    height: 600px;
+    width: 300px;
+    margin-right: 60px;
+
+
+    background-color: #0a253b;
+    -webkit-border-radius: 19px;
+    -webkit-border-bottom-right-radius: 25px;
+    -webkit-border-bottom-left-radius: 25px;
+    -moz-border-radius: 19px;
+    -moz-border-radius-bottomright: 25px;
+    -moz-border-radius-bottomleft: 25px;
+    border-radius: 19px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+
+}
+.topcard2{
+    height: 19px;
+    width: 300px;
+    background-color: #00FFFF;
+    -webkit-border-top-left-radius: 40px;
+    -webkit-border-top-right-radius: 40px;
+    -moz-border-radius-topleft: 40px;
+    -moz-border-radius-topright: 40px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.card3{
+    height: 500px;
+    margin-right: 60px;
+    width: 250px;
+
+
+    background-color: #1D476A;
+    -webkit-border-radius: 19px;
+    -webkit-border-bottom-right-radius: 25px;
+    -webkit-border-bottom-left-radius: 25px;
+    -moz-border-radius: 19px;
+    -moz-border-radius-bottomright: 25px;
+    -moz-border-radius-bottomleft: 25px;
+    border-radius: 19px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.topcard3{
+    height: 19px;
+    width: 250px;
+    background-color: gray;
+    -webkit-border-top-left-radius: 40px;
+    -webkit-border-top-right-radius: 40px;
+    -moz-border-radius-topleft: 40px;
+    -moz-border-radius-topright: 40px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
 }
 .cards u{
     font-weight: 400;
+}
+.coroa{
+    position: absolute;
+    top: 840px;
+    height: 100px;
 }
