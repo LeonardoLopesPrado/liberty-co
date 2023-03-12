@@ -19,12 +19,15 @@ a{
     align-items: center;
     justify-content: center;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%);
-    font-size: 45px;
     display: flex;
     height: 86px;
     font-family: 'Share Tech';
 }
 
+.container {
+    width: 80%;
+    margin: auto;
+}
 
 .items{
     font-size: 1rem;
@@ -37,11 +40,10 @@ a{
     justify-content: space-between;
 }
 
-.container-navbar{
+.navbar .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
 }
 
 .exit_container img{
@@ -65,47 +67,42 @@ a{
     border-radius: 20px;
 }
 
-footer{
-    height: 300px;
-    width: 100%;
+.footer{
+    height: 30vh;
+    width: 100vw;
     background-color: #041727;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
 }
 
-.container-footer{
-    width: 80%;
+.footer .container {
+    display: flex;
     flex-direction: column;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    gap: 50px;
 }
 
-.container-navbar-footer{
-    font-family: 'Montserrat';
+.footer .container .top {
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
-    height: 120px;
+}
 
+.footer .container .social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer .container .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 .items{
     justify-content: space-around;
-}
-
-.contact{
-    display: flex;
-}
-
-.contact li {
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-.designed{
-    color: white;
-    font-family: Montserrat;
 }

@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Share+Tech&display=swap%27');
 
 :root {
-   --main-blue: #073D8E;
-   --black: #000
-   --light-blue: #00FFFF;
-   --ligth-dark: #414141
-   --green-text: #01705C;
+    --main-blue: #073D8E;
+    --black: #000;
+    --light-blue: #00FFFF;
+    --light-dark: #414141;
+    --green-text: #01705C;
 }
 
 body {
-overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 * {
@@ -23,10 +23,10 @@ overflow-x: hidden;
     background-repeat: no-repeat;
     height: 100vh;
     color: white;
-  
+
 }
 
-.container-slogan{
+.container-slogan {
     font-family: 'Montserrat';
     width: 80%;
     height: 50%;
@@ -36,7 +36,7 @@ overflow-x: hidden;
     flex-direction: column;
 }
 
-.main-attention{
+.main-attention {
     height: 70%;
     display: flex;
     align-items: center;
@@ -44,11 +44,11 @@ overflow-x: hidden;
     width: 100%;
 }
 
-.title{
+.title {
     font-size: 64px;
 }
 
- button {
+button {
     box-sizing: border-box;
     font-size: 1.125em;
     width: 180px;
@@ -56,11 +56,11 @@ overflow-x: hidden;
     background-color: transparent;
     color: #ffffff;
     border: 1px solid #00FFFF;
-    
     cursor: pointer;
     border-radius: 10px;
 }
-.green{
+
+.green {
     margin-left: 10px;
     font-weight: 600;
     width: 320px;
@@ -68,7 +68,8 @@ overflow-x: hidden;
     margin-right: 10px;
     color: #01705C;
 }
-.green-right{
+
+.green-right {
     margin-right: 10px;
     font-weight: 600;
     width: 320px;
@@ -78,7 +79,7 @@ overflow-x: hidden;
     text-align: end;
 }
 
-.blue{
+.blue {
     margin-left: 10px;
     font-weight: 600;
     width: 320px;
@@ -87,7 +88,7 @@ overflow-x: hidden;
     color: var(--main-blue);
 }
 
-.blue-right{
+.blue-right {
     margin-right: 10px;
     font-weight: 600;
     width: 320px;
@@ -102,7 +103,7 @@ overflow-x: hidden;
     font-size: 1.5em;
 }
 
-.topics{
+.topics {
     display: flex;
     height: 60vh;
     width: 100vw;
@@ -110,7 +111,7 @@ overflow-x: hidden;
     justify-content: space-around;
 }
 
-.container-topics{
+.container-topics {
     height: 100%;
     width: 80%;
     font-family: 'Montserrat';
@@ -119,41 +120,41 @@ overflow-x: hidden;
     justify-content: space-around;
 }
 
-.one-to-three, .four-to-six{
-
+.one-to-three,
+.four-to-six {
     height: 300px;
     width: 30%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-
 }
-.img-container{
+
+.img-container {
     height: 70%;
- 
 }
 
-.one-to-three .topic{
+.one-to-three .topic {
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
-.four-to-six .topic{
+.four-to-six .topic {
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
-.h1-blue{
+.h1-blue {
     font-size: 48px;
     font-weight: 700;
     color: #073D8E;
     padding-right: 15px;
     padding-left: 15px;
 }
-.h1-green{
+
+.h1-green {
     font-size: 48px;
     font-weight: 700;
     color: #01705C;
@@ -162,7 +163,7 @@ overflow-x: hidden;
 }
 
 
-.container-cards{
+.container-cards {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -177,50 +178,42 @@ overflow-x: hidden;
     width: 300px;
     height: 100%;
     background: white;
-    
-    }
 
-.icon{
+}
+
+.icon {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.icon img{
+.icon img {
     height: 70px;
 }
 
-.content{
+.content {
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
 }
-    
-     .card .icon .fa {
-    
+
+.card .icon .fa {
     position: absolute;
-    
     top: 50%;
-    
     left: 50%;
-    
     transform: translate(-50%, -50%);
-    
     font-size: 80px;
-    
     color: #fff;
-    
-    }
-    
-     .card .slide {
+}
+
+.card .slide {
     width: 300px;
     height: 200px;
     transition: 0.5s;
-    }
-    
-     .card .slide.slide1 {
-    
+}
+
+.card .slide.slide1 {
     position: relative;
     display: flex;
     justify-content: center;
@@ -228,14 +221,14 @@ overflow-x: hidden;
     z-index: 1;
     transition: .7s;
     transform: translateY(100px);
-    
-    }
-    
-    .card:hover .slide.slide1{
-        transform: translateY(0px);
-    }
-    
-    .card .slide.slide2 {
+
+}
+
+.card:hover .slide.slide1 {
+    transform: translateY(0px);
+}
+
+.card .slide.slide2 {
     position: relative;
     display: flex;
     justify-content: center;
@@ -244,15 +237,16 @@ overflow-x: hidden;
     box-sizing: border-box;
     transition: .8s;
     transform: translateY(-100px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-    
-    }
-    .card:hover .slide.slide2{
-        transform: translateY(0);
-    }
-    
-     .card .slide.slide2::after{
-    content: ""; 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+
+}
+
+.card:hover .slide.slide2 {
+    transform: translateY(0);
+}
+
+.card .slide.slide2::after {
+    content: "";
     position: absolute;
     width: 30px;
     height: 4px;
@@ -261,22 +255,20 @@ overflow-x: hidden;
     left: 50%;
     transform: translateX(-50%);
     background: var(--main-blue);
-    
-    }
-    
-     .card .slide.slide2 .content p {
+
+}
+
+.card .slide.slide2 .content p {
     margin: 0;
     padding: 0;
     text-align: center;
-    color: var(--ligth-dar);
-    
-    }
-    
-     .card .slide.slide2 .content h3 {
+    color: var(--light-dark);
+}
+
+.card .slide.slide2 .content h3 {
     margin: 0 0 10px 0;
     padding: 0;
     font-size: 24px;
     text-align: center;
-    color: var(--ligth-dar);
-    } 
-
+    color: var(--light-dark);
+}

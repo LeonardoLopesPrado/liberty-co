@@ -1,0 +1,103 @@
+/* Desktop */
+@media screen and (min-width: 1440px) {
+    div.footer .container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        /* width: 90%;
+        margin: auto; */
+    }
+
+    .card .slide {
+        height: 25vh;
+    }
+}
+
+
+/* Laptop */
+@media screen and (max-width: 1024px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .card .slide {
+        height: 29vh;
+    }
+
+
+}
+
+/* @media screen and (max-width: 992px) {
+
+    .container {
+        width: 100vw;
+    }
+
+    .banner {
+        width: 100vw;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .phrase {
+        font-size: 0.95rem;
+    }
+
+    .phrases {
+        width: 80%;
+        margin: auto;
+        height: 44vh;
+    }
+} */
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+
+
+    .items {
+        width: 250px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+    
+    .formularioLogin input {
+        width: 200px;
+    }
+
+    .conteudoCadastro p, .conteudoLogin p {
+        font-size: 12px;
+
+    }
+
+    div.footer .container {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    div.footer .container .bottom {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card .slide {
+        height: 29vh;
+    }
+
+    .container-card .card .icon {
+        padding: 20px;
+    }
+
+}
+
+/* Mobile */
+/* @media screen and (max-width: 425px) {
+    div.footer .container {
+        display: flex;
+        flex-direction: row;
+    }
+} */

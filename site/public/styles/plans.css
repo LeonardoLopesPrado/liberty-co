@@ -1,24 +1,28 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
 }
-p{
+
+p {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.background{
-    background: linear-gradient(101.7deg, #1D476A 0%, #041727 100%);    background-size: 100vw;
+
+.background {
+    background: linear-gradient(101.7deg, #1D476A 0%, #041727 100%);
+    background-size: 100vw;
 
 }
+
 .bannerPlanos {
     background-repeat: no-repeat;
     height: 10vh;
     color: white;
 
 }
-.navbarPlanos{
+
+.navbarPlanos {
     background: rgb(0, 0, 0);
     font-size: 1.5em;
     display: flex;
@@ -52,7 +56,8 @@ p{
     justify-content: space-between;
     list-style-type: none;
 }
-.Texto{
+
+.Texto {
     display: grid;
     justify-content: space-evenly;
     text-align: center;
@@ -62,7 +67,7 @@ p{
     color: white;
 }
 
-.Texto .p{
+.Texto .p {
     font-size: 64px;
     height: 155px;
     width: 1500px;
@@ -70,28 +75,32 @@ p{
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
 }
-.Texto .p1{
+
+.Texto .p1 {
     justify-self: center;
     width: 800px;
     font-size: 30px;
-    font-weight:100;
+    font-weight: 100;
 }
+
 .circle {
-    position:relative;
+    position: relative;
     width: 224px;
     height: 224px;
     border-radius: 50%;
-    left:75%;    
+    left: 75%;
     color: #000000;
     background: #00FFFF;
     padding: 20px;
-    font-weight:bolder;
+    font-weight: bolder;
     font-size: 25px;
-  }
-.circle .p3{
+}
+
+.circle .p3 {
     font-size: 40px;
 }
-.cards{
+
+.cards {
     display: flex;
     height: 800px;
     padding-top: 110px;
@@ -103,32 +112,35 @@ p{
     font-weight: 400;
     line-height: 23px;
     letter-spacing: 0em;
-    text-align: left;    
+    text-align: left;
 }
-.cards .p{
+
+.cards .p {
     font-size: 60px;
 }
 
-.cards .pabsoluto1{
+.cards .pabsoluto1 {
     position: absolute;
     /* left: 17.5%;
     top: 104%; */
 }
-.cards .pabsoluto2{
+
+.cards .pabsoluto2 {
     position: absolute;
     /* left: 45.2%;
     top: 104%; */
 }
-.cards .pabsoluto3{
+
+.cards .pabsoluto3 {
     position: absolute;
     /* left: 72.5%;
     top: 104%; */
 }
-.card1{
+
+.card1 {
     height: 500px;
     margin-right: 60px;
     width: 280px;
-    
     background-color: #1c578815;
     -webkit-border-radius: 19px;
     -webkit-border-bottom-right-radius: 25px;
@@ -140,16 +152,20 @@ p{
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
 }
-.textcard1{
+
+.textcard1 {
     padding: 60px 0 0px 20px;
 }
-.textcard2{
+
+.textcard2 {
     padding: 60px 0 0px 20px;
 }
-.textcard3{
+
+.textcard3 {
     padding: 60px 0 0px 20px;
 }
-.topcard1{
+
+.topcard1 {
     height: 19px;
     width: 280px;
     background-color: gray;
@@ -160,24 +176,23 @@ p{
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
 }
-.botao1{
+
+.botao1 {
     height: 55px;
     width: 140px;
     margin: 20px 0 0 50px;
     background-color: whitesmoke;
     font-size: 15px;
     font-weight: 700;
-
-
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
     border-radius: 40px;
 }
-.card2{
+
+.card2 {
     height: 600px;
     width: 300px;
-    margin-right: 60px;    
-    
+    margin-right: 60px;
     background-color: #0a253b;
     -webkit-border-radius: 19px;
     -webkit-border-bottom-right-radius: 25px;
@@ -190,7 +205,8 @@ p{
     border-bottom-left-radius: 25px;
 
 }
-.topcard2{
+
+.topcard2 {
     height: 19px;
     width: 300px;
     background-color: #00FFFF;
@@ -201,27 +217,25 @@ p{
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
 }
-.botao2{
+
+.botao2 {
     height: 55px;
     width: 140px;
     margin: 20px 0 0 60px;
     background-color: #00FFFF;
     font-size: 15px;
     font-weight: 700;
-
-
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
     border-radius: 40px;
 }
-.card3{
+
+.card3 {
     height: 550px;
     margin-right: 60px;
     width: 300px;
     background-color: #1c578815;
     justify-self: center;
-
-
     -webkit-border-radius: 19px;
     -webkit-border-bottom-right-radius: 25px;
     -webkit-border-bottom-left-radius: 25px;
@@ -232,7 +246,8 @@ p{
     border-bottom-right-radius: 25px;
     border-bottom-left-radius: 25px;
 }
-.topcard3{
+
+.topcard3 {
     height: 19px;
     width: 300px;
     background-color: gray;
@@ -243,23 +258,24 @@ p{
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
 }
-.botao3{
+
+.botao3 {
     height: 55px;
     width: 140px;
     margin: 20px 0 0 60px;
     background-color: whitesmoke;
     font-size: 15px;
     font-weight: 700;
-
-
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
     border-radius: 40px;
 }
-.cards u{
+
+.cards u {
     font-weight: 400;
 }
-.coroa{
+
+.coroa {
     position: absolute;
     top: 840px;
     height: 100px;

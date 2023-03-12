@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="./styles/fotter&navbar.css">
-    <link rel="stylesheet" href="./styles/popup_estilo.css">
-    <link rel="shortcut icon" href="styles/assets/icone/logo.ico" type="image/x-icon">
-    <title>Liberty CO</title>
+    <link rel="stylesheet" href="styles/fotter&navbar.css">
+    <link rel="stylesheet" href="styles/response.css">
+    <link rel="stylesheet" href="styles/popup_estilo.css">
+    <script src="https://kit.fontawesome.com/d4c883c854.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="banner">
         <div class="navbar">
-            <div class="container-navbar">
+            <div class="container">
                 <div class="logo">
                     <img src="styles/assets/logo/logo_side.png" alt="LogoLibertyCo">
                 </div>
@@ -35,60 +36,61 @@
                 </div>
             </div>
         </div>
-        <div id="popup_fundo" class="popup">
-            <div class="popup_conteudo">
-                <div class="telaCadastro">
-                    <div class="imgCadastro"></div>
-                    <div class="formularioCadastro">
-                        <span class="popup_fechar">&times;</span>
-                        <div class="conteudoCadastro">
-                            <h1>CADASTRO</h1>
-                            <div id="alerta_erro"></div>
-                            <div class="inputCadastro">
-                                <input type="text" id="inp_razao" placeholder="Razão Social" onchange="sem_borda(1)">
-                                <input type="text" id="inp_cnpj" placeholder="CNPJ" onchange="sem_borda(2)">
-                                <input type="text" id="inp_token" placeholder="Token" onchange="sem_borda(3)">
-                                <input type="password" id="inp_senha" placeholder="Senha" onchange="sem_borda(4)">
-                                <input type="password" id="inp_confirmacao" placeholder="Confirmação de Senha"
-                                    onchange="sem_borda(5)">
-                            </div>
-                            <button class="botaoCadastrar" onclick="cadastrar()">CADASTRAR</button>
-                            <p>Já tem uma conta? <b><a onclick="abrirLogin()"><u>Clique
-                                            aqui</u></a></b> para Entrar</p>
+        <div class="containerPhrases">
+            <div class="phrases">
+                <div class="container">
+                    <span class="title">TODA SUA EMPRESA EM APENAS UM CLIQUE</span>
+                    <span class="phrase">Oferecemos a melhor tecnologia para o que sua empresa precisa!
+                        Com transparência, facilidade e segurança.</span>
+                    <button>CONHEÇA JÁ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popup_fundo" class="popup">
+        <div class="popup_conteudo">
+            <div class="telaCadastro">
+                <div class="imgCadastro"></div>
+                <div class="formularioCadastro">
+                    <span class="popup_fechar">&times;</span>
+                    <div class="conteudoCadastro">
+                        <h1>CADASTRO</h1>
+                        <div id="alerta_erro"></div>
+                        <div class="inputCadastro">
+                            <input type="text" id="inp_razao" placeholder="Razão Social" onchange="sem_borda(1)">
+                            <input type="text" id="inp_cnpj" placeholder="CNPJ" onchange="sem_borda(2)">
+                            <input type="text" id="inp_token" placeholder="Token" onchange="sem_borda(3)">
+                            <input type="password" id="inp_senha" placeholder="Senha" onchange="sem_borda(4)">
+                            <input type="password" id="inp_confirmacao" placeholder="Confirmação de Senha"
+                                onchange="sem_borda(5)">
                         </div>
+                        <button class="botaoCadastrar" onclick="cadastrar()">CADASTRAR</button>
+                        <p>Já tem uma conta? <b><a onclick="abrirLogin()"><u>Clique
+                                        aqui</u></a></b> para Entrar</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="popup_fundo_login" class="popupLogin">
-            <div class="popup_conteudo_login">
-                <div class="telaLogin">
-                    <div class="imgLogin">
-                        <span class="popup_fechar_login">&times;</span>
-                    </div>
-                    <div class="formularioLogin">
-                        <div class="conteudoLogin">
-                            <h1>LOGIN</h1>
-                            <div id="alerta_erro"></div>
-                            <div class="inputLogin">
-                                <input type="text" placeholder="E-mail" id="inp_email1" onchange="sem_borda(6)">
-                                <input type="password" placeholder="Senha" id="inp_senha1" onchange="sem_borda(7)">
-                            </div>
-                            <button class="botaoEntrar" onclick="entrar()">Entrar</button>
-                            <p>Não tem uma conta? <b><a onclick="abrirCadastro()"><u>Clique
-                                            aqui</u></a></b> para Cadastrar</p>
+    </div>
+    <div id="popup_fundo_login" class="popupLogin">
+        <div class="popup_conteudo_login">
+            <div class="telaLogin">
+                <div class="imgLogin">
+                    <span class="popup_fechar_login">&times;</span>
+                </div>
+                <div class="formularioLogin">
+                    <div class="conteudoLogin">
+                        <h1>LOGIN</h1>
+                        <div id="alerta_erro"></div>
+                        <div class="inputLogin">
+                            <input type="text" placeholder="E-mail" id="inp_email1" onchange="sem_borda(6)">
+                            <input type="password" placeholder="Senha" id="inp_senha1" onchange="sem_borda(7)">
                         </div>
+                        <button class="botaoEntrar" onclick="entrar()">Entrar</button>
+                        <p>Não tem uma conta? <b><a onclick="abrirCadastro()"><u>Clique
+                                        aqui</u></a></b> para Cadastrar</p>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="phrases">
-            <div class="container-slogan">
-                <span class="title">TODA SUA EMPRESA EM APENAS UM CLIQUE</span>
-                <span class="phrase">Oferecemos a melhor tecnologia para o que sua empresa precisa!
-                    Com transparência, facilidade e segurança.</span>
-                <button>CONHEÇA JÁ</button>
             </div>
         </div>
     </div>
@@ -99,80 +101,73 @@
                 <span class="phrase">Oferecemos a melhor tecnologia para o que sua empresa precisa! Com transparência,
                     facilidade e segurança.</span>
             </div>
-            <div>
                 <img src="styles/assets/vetor/pc.png" alt="">
-            </div>
         </div>
     </div>
-
-    <div class="container-cards">
-        <div class="cards-hover">
-            <div style="width: 300px;" class="container-card">
-                <div class="card">
-                    <div class="slide slide1">
-                        <div class="content">
-                            <div class="icon">
-                                <img src="styles/assets/vetor/ill1.png" alt="">
+    <div class="cards">
+        <div class="container-cards">
+            <div class="cards-hover">
+                <div class="container-card">
+                    <div class="card">
+                        <div class="slide slide1">
+                            <div class="content">
+                                <div class="icon">
+                                    <img src="styles/assets/vetor/ill1.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide slide2">
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet. Eos tenetur harum</p>
+                                <a style="color: rgb(38, 151, 221); margin-top: 10px;" href="">Saiba mais</a>
                             </div>
                         </div>
                     </div>
-                    <div class="slide slide2">
-                        <div class="content">
-                            <p>Lorem ipsum dolor sit amet. Eos tenetur harum</p>
-                            <a style="color: rgb(38, 151, 221); margin-top: 10px;" href="">Saiba mais</a>
+                </div>
+            </div>
+            <div class="cards-hover">
+                <div class="container-card">
+                    <div class="card">
+                        <div class="slide slide1">
+                            <div class="content">
+                                <div class="icon">
+                                    <img src="styles/assets/vetor/ill2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide slide2">
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet. Eos tenetur harum</p>
+                                <a style="color: rgb(38, 151, 221); margin-top: 10px;" href="">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-hover">
+                <div class="container-card">
+                    <div class="card">
+                        <div class="slide slide1">
+                            <div class="content">
+                                <div class="icon">
+                                    <img src="styles/assets/vetor/ill3.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide slide2">
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet. Eos tenetur harum</p>
+                                <a style="color: rgb(38, 151, 221); margin-top: 10px;" href="">Saiba mais</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="cards-hover">
-            <div style="width: 300px;" class="container-card">
-                <div class="card">
-                    <div class="slide slide1">
-                        <div class="content">
-                            <div class="icon">
-                                <img src="styles/assets/vetor/ill2.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide slide2">
-                        <div class="content">
-                            <p>Lorem ipsum dolor sit amet. Eos tenetur harum</p>
-                            <a style="color: rgb(38, 151, 221); margin-top: 10px;" href="">Saiba mais</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="cards-hover">
-            <div style="width: 300px;" class="container-card">
-                <div class="card">
-                    <div class="slide slide1">
-                        <div class="content">
-                            <div class="icon">
-                                <img src="styles/assets/vetor/ill3.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide slide2">
-                        <div class="content">
-                            <p>Lorem ipsum dolor sit amet. Eos tenetur harum</p>
-                            <a style="color: rgb(38, 151, 221); margin-top: 10px;" href="">Saiba mais</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-    <div class="division-text">
-        <div class="text-container">
-            <h1>Lorem ipsum dolor sit amet. Eos tenetur harum eum unde dolorem in distinctio dolorem eum voluptas iste
-                ut amet aliquid. </h1>
-        </div>
-    </div>
-    <footer>
-        <div class="container-footer">
-            <div class="container-navbar-footer">
+    <div class="footer">
+        <div class="container">
+            <div class="top">
                 <div class="logo">
                     <img src="styles/assets/logo/logo_side.png" alt="LogoLibertyCo">
                 </div>
@@ -187,25 +182,21 @@
                         <li>PLANOS</li>
                     </a>
                 </ul>
-                <div>
-                    <ul class="contact">
-                        <li><img src="styles/assets/icone/email.png" alt=""></li>
-                        <li><img src="styles/assets/icone/facebook.png" alt=""></li>
-                        <li><img src="styles/assets/icone/linkedin.png" alt=""></li>
-                        <li><img src="styles/assets/icone/instagram.png" alt=""></li>
-                    </ul>
-
-                </div>
+                <ul class="social">
+                    <li><i class="fa-solid fa-at"></i></li>
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><i class="fa-brands fa-linkedin"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                </ul>
             </div>
-            <div>
-                <h4 class="designed">Designed by Daniel Dias, Eryka Maria, Leonardo Prado, Marcelo Cruz, Mariana Namie</h4>
+            <div class="bottom">
+                <span>Designed by Daniel Diaz, Eryka Maria, Leonardo Prado, Marcelo Cruz, Mariana Namie</span>
             </div>
         </div>
-    </footer>
+    </div>
 </body>
 
 </html>
-
 <script>
     // popup
     var popup = document.getElementById('popup_fundo');
