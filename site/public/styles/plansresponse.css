@@ -57,4 +57,17 @@
     
     }
 
+    div.footer .container .bottom {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card .slide {
+        height: 29vh;
+    }
+
+    .container-card .card .icon {
+        padding: 20px;
+    }
+
 }
