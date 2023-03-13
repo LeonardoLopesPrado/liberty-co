@@ -1,4 +1,8 @@
 @media screen and (max-width: 768px){
+    .items {
+        width: 250px;
+    }
+    
     .circle{
         position: relative;
         width: 224px;

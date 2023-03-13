@@ -5,8 +5,16 @@
     overflow-x: hidden;
 }
 
+.title {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.phrase {
+    font-size: 1.5rem;
+}
+
 .banner {
-    /* width: 100vw; */
     height: 100vh;
     background-image: url(../styles/assets/background/banner.png);
     background-size: cover;
@@ -16,19 +24,8 @@
     color: white;
 }
 
-.title {
-    font-size: 4rem;
-    width: 70%;
-    font-weight: 700;
-}
-
-.phrase {
-    width: 50%;
-    font-size: 1.5rem;
-}
-
 .containerPhrases {
-    height: 80vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
 }
@@ -38,7 +35,6 @@
     margin: auto;
     display: flex;
     flex-direction: row;
-    /* justify-content: right; */
     align-items: flex-end;
     width: 100%;
 }
@@ -71,10 +67,6 @@
     margin: 0;
     cursor: pointer;
     padding: 5px;
-}
-
-.botao:hover {
-
 }
 
 .how-works {

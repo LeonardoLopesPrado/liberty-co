@@ -9,6 +9,15 @@ p {
     justify-content: center;
 }
 
+.botao {
+    border: 2px solid white;
+    background: none;
+    color: white;
+    margin: 0;
+    cursor: pointer;
+    padding: 5px;
+}
+
 .background {
     background: linear-gradient(101.7deg, #1D476A 0%, #041727 100%);
     background-size: 100vw;
