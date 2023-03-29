@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    appearance: none;
+
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+.menu {
+    background-color: black;
+    position: fixed;
+    overflow: hidden;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    -webkit-transform: translateZ(0) scale(1,1);
+    transform: translateZ(0) scale(1,1);
+}
+
+.menu > ul {
+    margin: 5px 0;
+}
+
+.menu li {
+    position: relative;
+    display: block;
+    width: 200px;
+}
+
+.menu li > a {
+    position: relative;
+    width: 255px;
+    color: aqua;
+    display: table;
+    font-size: 16px;
+    text-decoration: none;
+    -webkit-transform: translateZ(0) scale(1,1);
+    transform: translateZ(0) scale(1,1);
+    -webkit-transition: all 0.15s linear;
+    transition: all 0.15s linear;
+}
+
+.menu .span-menu {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    width: 180px;
+}
+
+.lista{
+    background-color: black;
+    text-transform: capitalize;
+}
+
+.menu li:hover a, nav.menu li.active > a {
+    color: #fff;
+    background-color: black;
+}
+
+nav {
+    -webkit-user-select: none;
+    user-select: none;
+    box-shadow: 0 0 10px red;
+}
+
+.sz {
+    position: relative;
+    width: 60px;
+    height: 40px;
+    top: 12px;
+}
+
+.menu:hover, nav.menu.expanded {
+    width: 200px;
+    overflow: hidden;
+}
