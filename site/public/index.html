@@ -15,7 +15,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 </head>
 
-<body>
+<body id="body">
     <div class="banner">
         <div class="navbar">
             <div class="container">
@@ -87,7 +87,6 @@
                 <div class="formularioLogin">
                     <div class="conteudoLogin">
                         <h1>LOGIN</h1>
-                        <div id="alerta_erro"></div>
                         <div class="inputLogin">
                             <input type="text" id="inp_cnpj1" placeholder="CNPJ">
                             <input type="text" id="inp_email1" placeholder="E-mail">
@@ -226,6 +225,7 @@
     // função para abrir com o clique
     function abrirPopup() {
         popup.style.display = 'block';
+        body.style.overflowY = "hidden";
         inp_razao.value = "";
         inp_email.value = "";
         inp_cnpj.value = "";
@@ -236,12 +236,14 @@
     // função para fechar popup com o clique no botão
     function fecharPopup() {
         popup.style.display = 'none';
+        body.style.overflowY = "visible";
     }
 
     // função para fechar popup se clicar fora
     function fecharFora(e) {
         if (e.target == popup) {
             popup.style.display = 'none';
+            body.style.overflowY = "visible";
         }
     }
 
@@ -256,6 +258,7 @@
     function abrirLogin() {
         popup.style.display = 'none';
         popupLogin.style.display = 'block';
+        body.style.overflowY = "hidden";
         inp_cnpj1.value = "";
         inp_email1.value = "";
         inp_token1.value = "";
@@ -264,11 +267,13 @@
 
     function fecharPopupLogin() {
         popupLogin.style.display = 'none';
+        body.style.overflowY = "visible";
     }
 
     function fecharForaLogin(e) {
         if (e.target == popupLogin) {
             popupLogin.style.display = 'none';
+            body.style.overflowY = "visible";
         }
     }
 
@@ -345,15 +350,15 @@
         });
         return false;
     }
-    
+
     function entrar() {
 
-        var cnpjVar= inp_cnpj1.value;
+        var cnpjVar = inp_cnpj1.value;
         var emailVar = inp_email1.value;
-        var tokenVar= inp_token1.value;
+        var tokenVar = inp_token1.value;
         var senhaVar = inp_senha1.value;
 
-        if (cnpjVar == "" ||  tokenVar == "" || emailVar == "" || senhaVar == "") {
+        if (cnpjVar == "" || tokenVar == "" || emailVar == "" || senhaVar == "") {
             alert("Preencha todos os campos");
             return false;
         }
