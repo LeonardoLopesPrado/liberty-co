@@ -1,54 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styleDash.css">
     <title>DashBoard - LibertyCo</title>
-</head>
+</head> 
 <body>
     <div class="container">
+
+        <div class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img src="styles/assets/logo/logo_side.png" alt="LogoLibertyCo">
+                </div>
+            </div>
+        </div>
         <div class="menu">
             <ul>
                 <li class="lista">
                     <a href="#">
                         <i class="sz liberty"></i>
-                        <span class="span-menu">LibertyCo</span> 
+                        <span class="span-menu">LibertyCo</span>
                     </a>
                 </li>
                 <li class="lista">
                     <a href="#">
                         <i class="sz Geral"></i>
-                        <span class="span-menu">Visão geral</span> 
+                        <span class="span-menu">Visão geral</span>
                     </a>
                 </li>
                 <li class="lista">
                     <a href="#">
                         <i class="sz Geral"></i>
-                        <span class="span-menu">Visão geral</span> 
+                        <span class="span-menu">Visão geral</span>
                     </a>
                 </li>
                 <li class="lista">
                     <a href="#">
                         <i class="sz Cpu"></i>
-                        <span class="span-menu">CPU</span> 
+                        <span class="span-menu">CPU</span>
                     </a>
                 </li>
                 <li class="lista">
                     <a href="#">
                         <i class="sz Ram"></i>
-                        <span class="span-menu">RAM</span> 
+                        <span class="span-menu">RAM</span>
                     </a>
                 </li>
                 <li class="lista">
                     <a href="#">
                         <i class="sz Armazenamento"></i>
-                        <span class="span-menu">Armazenamento</span> 
+                        <span class="span-menu">Armazenamento</span>
                     </a>
                 </li>
             </ul>
         </div>
+
+        <!-- gráficos -->
+        <div id="teste">
+            <div class="caixinha1">
+                <div>
+                    <canvas id="myChart"></canvas>
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                    <script>
+                        const ctx = document.getElementById('myChart');
+                      
+                        new Chart(ctx, {
+                          type: 'bar',
+                          data: {
+                            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                            datasets: [{
+                              label: '# of Votes',
+                              data: [12, 19, 3, 5, 2, 3],
+                              borderWidth: 1
+                            }]
+                          },
+                          options: {
+                            scales: {
+                              y: {
+                                beginAtZero: true
+                              }
+                            }
+                          }
+                        });
+                      </script>
+
+
+                  </div>
+            </div>
+            <div class="caixinha2">
+                <div>
+                    <canvas id="myChart2"></canvas>
+                  </div>
+                  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                  <script>
+                    const ctx2 = document.getElementById('myChart2');
+                  
+                    new Charpt2(ctx2, {
+                      type: 'doughnut',
+                      data: {
+                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                        datasets: [{
+                          label: '# of Votes',
+                          data: [12, 19, 3, 5, 2, 3],
+                          borderWidth: 1
+                        }]
+                      },
+                      options: {
+                        scales: {
+                          y: {
+                            beginAtZero: true
+                          }
+                        }
+                      }
+                    });
+                  </script>
+                
+            </div>
+            
+        </div>
     </div>
 </body>
+
 </html>
