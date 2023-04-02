@@ -26,6 +26,10 @@
 /* Tablet */
 @media screen and (max-width: 768px) {
 
+    .imgCadastro {
+        display: none;
+    }
+    
     .items {
         width: 250px;
     }

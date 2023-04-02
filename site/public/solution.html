@@ -14,8 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 </head>
-
-<body>
+<body id="body">
     <div class="banner">
         <div class="navbar">
             <div class="container">
@@ -71,8 +70,8 @@
                             <!-- <input type="text" id="inp_token" placeholder="Token"> -->
                             <input type="password" id="inp_senha" placeholder="Senha">
                             <input type="password" id="inp_confirmacao" placeholder="Confirmação de Senha">
+                            <button class="botaoCadastrar" onclick="cadastrar()">CADASTRAR</button>
                         </div>
-                        <button class="botaoCadastrar" onclick="cadastrar()">CADASTRAR</button>
                         <p>Já tem uma conta? <b><a onclick="abrirLogin()" id="popup_botao"><u>Clique
                                         aqui</u></a></b> para Entrar</p>
                     </div>

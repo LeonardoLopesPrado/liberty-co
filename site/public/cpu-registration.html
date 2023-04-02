@@ -1,188 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Montserrat:wght@500&display=swap"
-        rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liberty CO</title>
-    <link rel="stylesheet" href="styles/plans.css">
-    <link rel="stylesheet" href="styles/fotter&navbar.css">
-    <link rel="stylesheet" href="styles/plansresponse.css">
-    <link rel="stylesheet" href="styles/popup_estilo.css">
-    <script src="https://kit.fontawesome.com/d4c883c854.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <link rel="stylesheet" href="styles/cpu-registration.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <title>Cadastro de Máquina</title>
 </head>
-<body id="body">
-    <div class="background">
-        <div class="bannerPlanos">
-            <div class="navbar">
-                <div class="container">
-                    <div class="logo">
-                        <img src="styles/assets/logo/logo_side.png" alt="LogoLibertyCo">
-                    </div>
-                    <ul class="items">
-                        <a href="index.html">
-                            <li>HOME</li>
-                        </a>
-                        <a href="solution.html">
-                            <li>SOLUÇÃO</li>
-                        </a>
-                        <a href="./Planos.html">
-                            <li>PLANOS</li>
-                        </a>
-                    </ul>
-                    <div class="exit_container">
-                        <button id="popup_botao" class="botao">Login/Cadastro</button>
-                    </div>
-                </div>
+
+<body>
+<div class="content">
+    <div class="container">
+        <div class="sidebar">
+            <div class="company">
+                <h2>Fernanda Caramico</h2>
+                <h3>Gestora de CRM</h3>
+            </div>
+            <div class="items">
+                <ul>
+                    <li id="popup_botao" class="botao">Cadastrar</li>
+                    <li>Sair</li>
+                </ul>
             </div>
         </div>
         <div id="popup_fundo" class="popup">
             <div class="popup_conteudo">
                 <div class="telaCadastro">
-                    <div class="imgCadastro"></div>
                     <div class="formularioCadastro">
                         <span class="popup_fechar">&times;</span>
                         <div class="conteudoCadastro">
                             <h1>CADASTRO</h1>
                             <div class="inputCadastro">
-                                <input type="text" id="inp_razao" placeholder="Razão Social">
-                                <input type="text" id="inp_cnpj" placeholder="CNPJ">
+                                <input type="text" id="inp_nome" placeholder="Nome">
+                                <input type="text" id="inp_sobrenome" placeholder="Sobrenome">
                                 <input type="text" id="inp_email" placeholder="E-mail">
-                                <input type="text" id="inp_cep" placeholder="CEP" onblur="pesquisaCep(this.value)">
-                                <input type="text" id="inp_logradouro" placeholder="Logradouro">
-                                <input type="text" id="inp_bairro" placeholder="Bairro">
-                                <input type="text" id="inp_numero" placeholder="Numero">
-                                <input type="text" id="inp_complemento" placeholder="Complemento">
-                                <!-- <input type="text" id="inp_token" placeholder="Token"> -->
                                 <input type="password" id="inp_senha" placeholder="Senha">
                                 <input type="password" id="inp_confirmacao" placeholder="Confirmação de Senha">
                                 <button class="botaoCadastrar" onclick="cadastrar()">CADASTRAR</button>
                             </div>
-                            <p>Já tem uma conta? <b><a onclick="abrirLogin()" id="popup_botao"><u>Clique
-                                            aqui</u></a></b> para Entrar</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="popup_fundo_login" class="popupLogin">
-            <div class="popup_conteudo_login">
-                <div class="telaLogin">
-                    <div class="imgLogin">
-                        <span class="popup_fechar_login">&times;</span>
-                    </div>
-                    <div class="formularioLogin">
-                        <div class="conteudoLogin">
-                            <h1>LOGIN</h1>
-                            <div class="inputLogin">
-                                <input type="text" id="inp_cnpj1" placeholder="CNPJ">
-                                <input type="text" id="inp_email1" placeholder="E-mail">
-                                <input type="text" id="inp_token1" placeholder="Token">
-                                <input type="password" placeholder="Senha" id="inp_senha1">
-                            </div>
-                            <button class="botaoEntrar" onclick="entrar()">Entrar</button>
-                            <p>Não tem uma conta? <b><a onclick="abrirCadastro()" id="popup_botao"><u>Clique
-                                            aqui</u></a></b> para Cadastrar</p>
+        <div class="list">
+            <div class="container">
+                <div class="computers">
+                    <div class="computer">
+                        <div class="activity">
+                            <small>Ativo</small>
                         </div>
+                        <img src="styles/assets/icone/+monitor.png" alt="">
+                        <span>Modelo da Máquina</span>
+                    </div>
+                    <div class="computer">
+                        <div class="activity">
+                            <small>Ativo</small>
+                        </div>
+                        <img src="styles/assets/icone/+monitor.png" alt="">
+                        <span>Modelo da Máquina</span>
+                    </div>
+                    <div class="computer">
+                        <div class="activity">
+                            <small>Ativo</small>
+                        </div>
+                        <img src="styles/assets/icone/+monitor.png" alt="">
+                        <span>Modelo da Máquina</span>
+                    </div>
+                    <div class="computer">
+                        <div class="activity">
+                            <small>Ativo</small>
+                        </div>
+                        <img src="styles/assets/icone/+monitor.png" alt="">
+                        <span>Modelo da Máquina</span>
+                    </div>
+                    <div class="computer">
+                        <div class="activity">
+                            <small>Ativo</small>
+                        </div>
+                        <img src="styles/assets/icone/+monitor.png" alt="">
+                        <span>Modelo da Máquina</span>
+                    </div>
+                    <div class="computer">
+                        <div class="activity">
+                            <small>Ativo</small>
+                        </div>
+                        <img src="styles/assets/icone/+monitor.png" alt="">
+                        <span>Modelo da Máquina</span>
+                    </div>
+                    <div class="computer">
+                        <div class="activity">
+                            <small>Ativo</small>
+                        </div>
+                        <img src="styles/assets/icone/+monitor.png" alt="">
+                        <span>Modelo da Máquina</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="Texto">
-            <p class="p">CONHEÇA NOSSOS PLANOS</p> <br> <br>
-            <p class="p1">Somos a alternativa e a solução para as instituições que visam o reconhecimento pela qualidade de ensino</p>
-        </div>
-
-        <div class="circle">
-            <div class="texto"></div>
-            <p class="p">POR MAIS</p> <br>
-            <p class="p1"> R$
-            <p class="p3"> 50,00</p>
-            </p> <br>
-            <p class="p4"> Garanta uma VM</p>
-        </div>
-        <div class="cards">
-            <div class="card1">
-                <div class="topcard1"></div>
-                <div class="textcard1">
-                    <p class="pabsoluto1"> R$ </p>
-                    <p class="p">58,00</p>/mês
-                    <br>
-                    <button class="botao1">Assine Aqui</button> <br><br>
-                    ✓ Assine para até 5 gestores <br> <br> <br>
-                    ✓ 10 computadores p/ gestor <br> <br> <br>
-                    ✓ Suporte em até 12h
-                </div>
-            </div>
-            <div class="card2">
-                <div class="topcard2"></div>
-                <div class="textcard2">
-                    <p class="pabsoluto2"> R$ </p>
-                    <p class="p">88,00</p>/mês
-                    <br>
-                    <button class="botao2">Assine Aqui</button> <br><br>
-                    ✓ Acesso ilimitado por gestor <br> <br> <br>
-                    ✓ 25 computadores p/ gestor <br> <br> <br>
-                    ✓ Suporte prioritário <br> <br> <br>
-                    ✓ Suporte em até 2h <br> <br> <br>
-                    ✓ Notifações de dicas e melhorias
-                </div>
-            </div>
-            <div class="card3">
-                <div class="topcard3"></div>
-                <div class="textcard3">
-                    <p class="pabsoluto3"> R$ </p>
-                    <p class="p">118,00</p>/mês
-                    <br>
-                    <button class="botao3">Assine Aqui</button> <br> <br>
-                    ✓ Acesso ilimitado por gestor <br> <br>
-                    ✓ Quantidade ilimitada de computadores <br> <br>
-                    ✓ Suporte prioritário <br> <br>
-                    ✓ Suporte em até 2h <br> <br>
-                    ✓ Notificações de dicas de melhorias
-                </div>
-            </div>
-        </div>
     </div>
-    <div class="footer">
-        <div class="container">
-            <div class="top">
-                <div class="logo">
-                    <img src="styles/assets/logo/logo_side.png" alt="LogoLibertyCo">
-                </div>
-                <ul class="items">
-                    <a href="">
-                        <li>HOME</li>
-                    </a>
-                    <a href="">
-                        <li>SOLUÇÃO</li>
-                    </a>
-                    <a href="./Planos.html">
-                        <li>PLANOS</li>
-                    </a>
-                </ul>
-                <ul class="social">
-                    <li><i class="fa-solid fa-at"></i></li>
-                    <li><i class="fa-brands fa-facebook"></i></li>
-                    <li><i class="fa-brands fa-linkedin"></i></li>
-                    <li><i class="fa-brands fa-instagram"></i></li>
-                </ul>
-            </div>
-            <div class="bottom">
-                <span>Designed by Daniel Diaz, Eryka Maria, Leonardo Prado, Marcelo Cruz, Mariana Namie</span>
-            </div>
-        </div>
-    </div>
+</div>
 </body>
-
 </html>
 <script>
     // popup

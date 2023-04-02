@@ -14,7 +14,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 </head>
-
 <body id="body">
     <div class="banner">
         <div class="navbar">
@@ -85,8 +84,12 @@
                     <span class="popup_fechar_login">&times;</span>
                 </div>
                 <div class="formularioLogin">
+                    <h1>LOGIN</h1>
                     <div class="conteudoLogin">
-                        <h1>LOGIN</h1>
+                        <select id="select" class="select">
+                            <option class="option" value="selEmpresa">Empresa</option>
+                            <option class="option" value="selGestor">Gestor</option>
+                        </select>
                         <div class="inputLogin">
                             <input type="text" id="inp_cnpj1" placeholder="CNPJ">
                             <input type="text" id="inp_email1" placeholder="E-mail">

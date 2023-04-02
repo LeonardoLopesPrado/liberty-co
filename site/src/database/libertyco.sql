@@ -8,8 +8,6 @@ CREATE TABLE Instituicao (
     cnpj VARCHAR(14),
     email VARCHAR(100),
     cep VARCHAR(8),
-    logradouro VARCHAR(45),
-    bairro VARCHAR(45),
     numero INT,
     complemento VARCHAR(10),
     token VARCHAR(6),
@@ -19,6 +17,8 @@ CREATE TABLE Instituicao (
 CREATE TABLE Gerente (
 	idGerente INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(45),
+    ultimoNome VARCHAR (45),
+    cargo VARCHAR(25),
     email VARCHAR(45),
     senha VARCHAR(45),
     fkInstituicao INT, FOREIGN KEY (fkInstituicao) REFERENCES Instituicao(idInstituicao)

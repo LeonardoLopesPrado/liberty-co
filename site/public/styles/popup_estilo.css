@@ -59,11 +59,15 @@
 
 .formularioCadastro {
     width: 100%;
-    padding: 2%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+}
+
+.formularioCadastro p, .formularioLogin p{
+    font-size: 12px;
+    display: block;
 }
 
 .formularioCadastro h1 {
@@ -75,12 +79,13 @@
 }
 
 .inputCadastro {
+    width: 70%;
+    height: 70vh;
+    gap: 30px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    height: 70vh;
     overflow: auto;
 }
 
@@ -213,8 +218,18 @@
     font-weight: 500;
     font-size: 32px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     display: flex;
+}
+
+.formularioLogin .select {
+    padding: 10px;
+    font-size: 15px;
+    color: black;
+    background-color: #E7E7E7;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 30px;
 }
 
 .formularioLogin input {
@@ -227,10 +242,13 @@
 }
 
 .inputLogin {
+    width: 70%;
+    gap: 30px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    gap: 30px;
+    align-items: center;
+    overflow: auto;
 }
 
 .conteudoLogin {
