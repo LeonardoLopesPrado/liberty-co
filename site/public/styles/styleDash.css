@@ -1,4 +1,126 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Share+Tech&display=swap%27');
+*{
+    margin:0;
+    padding: 0;
+    text-decoration: none;
+}
+.sidebar{
+    position: fixed;
+    width: 255px;
+    left: -240;
+    height: 100%;
+    background: #1e1e1e;
+    transition: all .5s ease;
+}
+
+.sidebar header {
+    font-size: 28px;
+    color: white;
+    line-height: 70px;
+    text-align: center;
+    background: #1b1b1b;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sidebar a {
+    display: block;
+    height: 65px;
+    width: 100%;
+    color: white;
+    line-height: 65px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    border-bottom: black 1px solid;
+    border-top: rgba(255, 255, 255, .1) 1px solid;
+    border-left: transparent 5px solid;
+    font-family: 'Open Sans', sans-serif;
+    transition: all .5s ease;
+}
+
+a.active,a:hover {
+    border-left: #593632 5px solid;
+    color: #b93632;
+}
+
+.sidebar a i{
+    font-size: 23px;
+    margin-right: 16px;
+}
+
+.sidebar a span{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#check {
+    display: none;
+}
+
+label #btn,label #cancel {
+    position: absolute;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    border: #262626 1px solid;
+    margin: 15px 30px;
+    font-size: 28px;
+    background: #262626;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    line-height: 45px;
+    transition: all .5s ease;
+}
+
+label #cancel {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#check:checked ~ .sidebar {
+    left: 0;
+}
+
+#check:checked ~ label #btn {
+    margin-left: 245px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+@media(max-width: 860px) {.sidebar{
+    height: auto;
+    width: 70px;
+    left: 0;
+    margin: 100px 0;
+}
+header, #btn, #cancel{
+    display: none;
+}
+
+span{
+    position: absolute;
+    margin-left: 23px;
+    opacity: 0;
+    visibility: hidden;
+}
+.sidebar a {
+    height: 60px;
+}
+.sidebar a i {
+    margin-left: -10px;
+}
+a:hover {
+    width: 200px;
+    background: inherit;
+}
+.sidebar a:hover span {
+    opacity: 1;
+    visibility: visible;
+    }
+}
+/* * {
     padding: 0;
     margin: 0;
     -webkit-box-sizing: border-box;
@@ -128,7 +250,6 @@ nav {
 }
 
 #teste {
-    border: red 2px solid;
     height: 100vh;
 }
 
@@ -137,5 +258,6 @@ nav {
     width: 30vw;
     height: 50vh;
     margin-left: 15%;
+    margin-top: 5%;
 }
-
+ */
