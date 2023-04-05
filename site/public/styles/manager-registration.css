@@ -18,12 +18,12 @@
     background-color: #D7E6F2;
 }
 
-.list .container .manager .actions{
+.list .container .manager .actions {
     display: flex;
     gap: 30px;
 }
 
-.list .container .manager .actions img{
+.list .container .manager .actions img {
     width: 40px;
 }
 
@@ -81,7 +81,8 @@
     align-items: center;
 }
 
-.formularioCadastro p, .formularioLogin p{
+.formularioCadastro p,
+.formularioLogin p {
     font-size: 12px;
     display: block;
 }

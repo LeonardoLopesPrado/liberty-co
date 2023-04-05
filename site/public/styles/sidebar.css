@@ -22,25 +22,6 @@
     border-radius: 20px;
 }
 
-.content .container {
-    display: flex;
-}
-
-.list {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;
-    font-size: large;
-}
-
-.list .container {
-    width: 80%;
-    margin: auto;
-}
-
-
 .sidebar {
     padding: 0% 1%;
     color: white;

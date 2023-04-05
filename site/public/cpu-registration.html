@@ -1,107 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/cpu-registration.css">
-    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/styleDash.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/9763306bd1.js" crossorigin="anonymous"></script>
     <title>Cadastro de Máquina</title>
 </head>
 
 <body>
-<div class="content">
-    <div class="container">
+    <div class="content">
         <div class="sidebar">
-            <div class="company">
-                <h2>Fernanda Caramico</h2>
-                <h3>Gestora de CRM</h3>
-            </div>
-            <div class="items">
-                <ul>
-                    <li id="popup_botao" class="botao">Cadastrar</li>
-                    <li>Sair</li>
-                </ul>
-            </div>
+            <header>
+                <div class="logo">
+                    <img src="styles/assets/logo/logo_side.png" alt="LogoLibertyCo">
+                </div>
+            </header>
+            <a href="#">
+                <i class="fas fa-stream"></i>
+                <span>Visão geral </span>
+            </a>
+            <a href="#">
+                <i class="fas fa-microchip"></i>
+                <span>CPU</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-sliders-h"></i>
+                <span>RAM</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-wifi"></i>
+                <span>Rede</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-hard-drive"></i>
+                <span>Armazenamento</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-envelope"></i>
+                <span>Contato</span>
+            </a>
         </div>
-        <div id="popup_fundo" class="popup">
-            <div class="popup_conteudo">
-                <div class="telaCadastro">
-                    <div class="formularioCadastro">
-                        <span class="popup_fechar">&times;</span>
-                        <div class="conteudoCadastro">
-                            <h1>CADASTRO</h1>
-                            <div class="inputCadastro">
-                                <input type="text" id="inp_nome" placeholder="Nome">
-                                <input type="text" id="inp_sobrenome" placeholder="Sobrenome">
-                                <input type="text" id="inp_email" placeholder="E-mail">
-                                <input type="password" id="inp_senha" placeholder="Senha">
-                                <input type="password" id="inp_confirmacao" placeholder="Confirmação de Senha">
-                                <button class="botaoCadastrar" onclick="cadastrar()">CADASTRAR</button>
+        <div class="container">
+            <div id="popup_fundo" class="popup">
+                <div class="popup_conteudo">
+                    <div class="telaCadastro">
+                        <div class="formularioCadastro">
+                            <span class="popup_fechar">&times;</span>
+                            <div class="conteudoCadastro">
+                                <h1>CADASTRO</h1>
+                                <div class="inputCadastro">
+                                    <input type="text" id="inp_nome" placeholder="Nome">
+                                    <input type="text" id="inp_sobrenome" placeholder="Sobrenome">
+                                    <input type="text" id="inp_email" placeholder="E-mail">
+                                    <input type="password" id="inp_senha" placeholder="Senha">
+                                    <input type="password" id="inp_confirmacao" placeholder="Confirmação de Senha">
+                                    <button class="botaoCadastrar" onclick="cadastrar()">CADASTRAR</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="list">
-            <div class="container">
-                <div class="computers">
-                    <div class="computer">
-                        <div class="activity">
-                            <small>Ativo</small>
+            <div class="list">
+                <div class="container">
+                    <div class="computers">
+                        <div class="computer">
+                            <div class="activity">
+                                <small>Ativo</small>
+                            </div>
+                            <img src="styles/assets/icone/+monitor.png" alt="">
+                            <span>Modelo da Máquina</span>
                         </div>
-                        <img src="styles/assets/icone/+monitor.png" alt="">
-                        <span>Modelo da Máquina</span>
-                    </div>
-                    <div class="computer">
-                        <div class="activity">
-                            <small>Ativo</small>
+                        <div class="computer">
+                            <div class="activity">
+                                <small>Ativo</small>
+                            </div>
+                            <img src="styles/assets/icone/+monitor.png" alt="">
+                            <span>Modelo da Máquina</span>
                         </div>
-                        <img src="styles/assets/icone/+monitor.png" alt="">
-                        <span>Modelo da Máquina</span>
-                    </div>
-                    <div class="computer">
-                        <div class="activity">
-                            <small>Ativo</small>
+                        <div class="computer">
+                            <div class="activity">
+                                <small>Ativo</small>
+                            </div>
+                            <img src="styles/assets/icone/+monitor.png" alt="">
+                            <span>Modelo da Máquina</span>
                         </div>
-                        <img src="styles/assets/icone/+monitor.png" alt="">
-                        <span>Modelo da Máquina</span>
-                    </div>
-                    <div class="computer">
-                        <div class="activity">
-                            <small>Ativo</small>
+                        <div class="computer">
+                            <div class="activity">
+                                <small>Ativo</small>
+                            </div>
+                            <img src="styles/assets/icone/+monitor.png" alt="">
+                            <span>Modelo da Máquina</span>
                         </div>
-                        <img src="styles/assets/icone/+monitor.png" alt="">
-                        <span>Modelo da Máquina</span>
-                    </div>
-                    <div class="computer">
-                        <div class="activity">
-                            <small>Ativo</small>
+                        <div class="computer">
+                            <div class="activity">
+                                <small>Ativo</small>
+                            </div>
+                            <img src="styles/assets/icone/+monitor.png" alt="">
+                            <span>Modelo da Máquina</span>
                         </div>
-                        <img src="styles/assets/icone/+monitor.png" alt="">
-                        <span>Modelo da Máquina</span>
-                    </div>
-                    <div class="computer">
-                        <div class="activity">
-                            <small>Ativo</small>
+                        <div class="computer">
+                            <div class="activity">
+                                <small>Ativo</small>
+                            </div>
+                            <img src="styles/assets/icone/+monitor.png" alt="">
+                            <span>Modelo da Máquina</span>
                         </div>
-                        <img src="styles/assets/icone/+monitor.png" alt="">
-                        <span>Modelo da Máquina</span>
-                    </div>
-                    <div class="computer">
-                        <div class="activity">
-                            <small>Ativo</small>
+                        <div class="computer">
+                            <div class="activity">
+                                <small>Ativo</small>
+                            </div>
+                            <img src="styles/assets/icone/+monitor.png" alt="">
+                            <span>Modelo da Máquina</span>
                         </div>
-                        <img src="styles/assets/icone/+monitor.png" alt="">
-                        <span>Modelo da Máquina</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </body>
+
 </html>
 <script>
     // popup
