@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/fotter&navbar.css">
     <link rel="stylesheet" href="styles/response.css">
     <link rel="stylesheet" href="styles/popup_estilo.css">
+    <script src="js/funcoes.js"></script>
     <script src="https://kit.fontawesome.com/d4c883c854.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
@@ -390,10 +391,16 @@
                     console.log(json);
                     console.log(JSON.stringify(json));
 
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.RAZAO_SOCIAL_USUARIO = json.razaoSoc;
-                    sessionStorage.ID_USUARIO = json.idInstituicao;
+                    sessionStorage.EMAIL_EMPRESA = json.email;
+                    sessionStorage.RAZAO_SOCIAL_EMPRESA = json.razaoSoc;
+                    sessionStorage.CNPJ_EMPRESA = json.cnpj;
+                    sessionStorage.ID_EMPRESA = json.idInstituicao;
+                    
+                    setTimeout(function () {
+                            window.location = "./manager-registration.html";
+                        }, 1000); // apenas para exibir o loading
                 });
+
 
             } else {
 

@@ -7,8 +7,8 @@ function testar(req, res) {
     res.json("ESTAMOS FUNCIONANDO!");
 }
 
-function listar(req, res) {
-    usuarioModel.listar()
+function listarGestores(req, res) {
+    usuarioModel.listarGestores()
         .then(function (resultado) {
             if (resultado.length > 0) {
                 res.status(200).json(resultado);
@@ -116,9 +116,50 @@ function cadastrar(req, res) {
     }
 }
 
+function cadastrarGestor(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var nomeGestor = req.body.nomeServer;
+    var ultimoNome = req.body.sobrenomeServer;
+    var cargo = req.body.cargoServer;
+    var email = req.body.emailServer;
+    var senha = req.body.senhaServer;
+
+    // Faça as validações dos valores
+    if (nomeGestor == undefined) {
+        res.status(400).send("o nome do gestor está undefined!");
+    } else if (ultimoNome == undefined) {
+        res.status(400).send("Seu sobrenome está undefined!");
+    } else if (cargo == undefined) {
+        res.status(400).send("Seu cargo está undefined!");
+    } else if (email == undefined) {
+        res.status(400).send("Seu email está undefined!");
+    } else if (senha == undefined) {
+        res.status(400).send("Sua senha está undefined!");
+    } else {
+
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.cadastrar(nomeGestor, ultimoNome, cargo, email, senha)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
 module.exports = {
     entrar,
     cadastrar,
-    listar,
+    cadastrarGestor,
+    listarGestores,
     testar
 }

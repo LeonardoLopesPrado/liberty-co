@@ -6,43 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/manager-registration.css">
-    <link rel="stylesheet" href="styles/styleDash.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="../js/funcoes.js"></script>
     <script src="https://kit.fontawesome.com/9763306bd1.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <title>Cadastro de Gestor</title>
 </head>
 
-<body>
+<body onload="validarSessao(), atualizarFeed()">
     <div class="content">
         <div class="sidebar">
             <header>
                 <div class="logo">
                     <img src="styles/assets/logo/logo_side.png" alt="LogoLibertyCo">
                 </div>
+                <div class="infos empresa">
+                    <h2 id="b_empresa">empresa</h2>
+                    <span id="b_cnpj">cnpj</span>
+                </div>
             </header>
-            <a href="#">
-                <i class="fas fa-stream"></i>
-                <span>Visão geral </span>
+            <a href="#" id="popup_botao">
+                <i class="fa-solid fa-user-plus" style="color: #ffffff;"></i>
+                <span id="">Cadastrar gestor</span>
             </a>
             <a href="#">
-                <i class="fas fa-microchip"></i>
-                <span>CPU</span>
-            </a>
-            <a href="#">
-                <i class="fas fa-sliders-h"></i>
-                <span>RAM</span>
-            </a>
-            <a href="#">
-                <i class="fas fa-wifi"></i>
-                <span>Rede</span>
-            </a>
-            <a href="#">
-                <i class="fas fa-hard-drive"></i>
-                <span>Armazenamento</span>
-            </a>
-            <a href="#">
-                <i class="fas fa-envelope"></i>
-                <span>Contato</span>
+                <i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i>
+                <span>Sair</span>
             </a>
         </div>
         <div class="container">
@@ -55,8 +46,9 @@
                                 <h1>CADASTRO</h1>
                                 <div class="inputCadastro">
                                     <input type="text" id="inp_nome" placeholder="Nome">
-                                    <input type="text" id="inp_sobrenome" placeholder="Sobrenome">
-                                    <input type="text" id="inp_email" placeholder="E-mail">
+                                    <input type="text" id="inp_ultimo_nome" placeholder="Último Nome">
+                                    <input type="text" id="inp_cargo" placeholder="Cargo">
+                                    <input type="email" id="inp_email" placeholder="E-mail">
                                     <input type="password" id="inp_senha" placeholder="Senha">
                                     <input type="password" id="inp_confirmacao" placeholder="Confirmação de Senha">
                                     <button class="botaoCadastrar" onclick="cadastrar()">CADASTRAR</button>
@@ -68,188 +60,16 @@
             </div>
             <div class="list">
                 <div class="container">
-                    <div class="managers">
-                        <div class="manager">
-                            <div class="id">
-                                <span>1</span>
-                            </div>
-                            <div class="name">
-                                <span>Fernanda Caramico</span>
-                            </div>
-                            <div class="role">
-                                <span>Gestora de CRM</span>
-                            </div>
-                            <div class="actions">
-                                <img src="styles/assets/icone/edit-pencil.png" alt="">
-                                <img src="styles/assets/icone/icon-trash.png" alt="">
-                            </div>
-                        </div>
-                        <div class="manager">
-                            <div class="id">
-                                <span>1</span>
-                            </div>
-                            <div class="name">
-                                <span>Fernanda Caramico</span>
-                            </div>
-                            <div class="role">
-                                <span>Gestora de CRM</span>
-                            </div>
-                            <div class="actions">
-                                <img src="styles/assets/icone/edit-pencil.png" alt="">
-                                <img src="styles/assets/icone/icon-trash.png" alt="">
-                            </div>
-                        </div>
-                        <div class="manager">
-                            <div class="id">
-                                <span>1</span>
-                            </div>
-                            <div class="name">
-                                <span>Fernanda Caramico</span>
-                            </div>
-                            <div class="role">
-                                <span>Gestora de CRM</span>
-                            </div>
-                            <div class="actions">
-                                <img src="styles/assets/icone/edit-pencil.png" alt="">
-                                <img src="styles/assets/icone/icon-trash.png" alt="">
-                            </div>
-                        </div>
-                        <div class="manager">
-                            <div class="id">
-                                <span>1</span>
-                            </div>
-                            <div class="name">
-                                <span>Fernanda Caramico</span>
-                            </div>
-                            <div class="role">
-                                <span>Gestora de CRM</span>
-                            </div>
-                            <div class="actions">
-                                <img src="styles/assets/icone/edit-pencil.png" alt="">
-                                <img src="styles/assets/icone/icon-trash.png" alt="">
-                            </div>
-                        </div>
-                        <div class="manager">
-                            <div class="id">
-                                <span>1</span>
-                            </div>
-                            <div class="name">
-                                <span>Fernanda Caramico</span>
-                            </div>
-                            <div class="role">
-                                <span>Gestora de CRM</span>
-                            </div>
-                            <div class="actions">
-                                <img src="styles/assets/icone/edit-pencil.png" alt="">
-                                <img src="styles/assets/icone/icon-trash.png" alt="">
-                            </div>
-                        </div>
-                        <div class="manager">
-                            <div class="id">
-                                <span>1</span>
-                            </div>
-                            <div class="name">
-                                <span>Fernanda Caramico</span>
-                            </div>
-                            <div class="role">
-                                <span>Gestora de CRM</span>
-                            </div>
-                            <div class="actions">
-                                <img src="styles/assets/icone/edit-pencil.png" alt="">
-                                <img src="styles/assets/icone/icon-trash.png" alt="">
-                            </div>
-                        </div>
-                        <div class="manager">
-                            <div class="id">
-                                <span>1</span>
-                            </div>
-                            <div class="name">
-                                <span>Fernanda Caramico</span>
-                            </div>
-                            <div class="role">
-                                <span>Gestora de CRM</span>
-                            </div>
-                            <div class="actions">
-                                <img src="styles/assets/icone/edit-pencil.png" alt="">
-                                <img src="styles/assets/icone/icon-trash.png" alt="">
-                            </div>
-                        </div>
-                        <div class="manager">
-                            <div class="id">
-                                <span>1</span>
-                            </div>
-                            <div class="name">
-                                <span>Fernanda Caramico</span>
-                            </div>
-                            <div class="role">
-                                <span>Gestora de CRM</span>
-                            </div>
-                            <div class="actions">
-                                <img src="styles/assets/icone/edit-pencil.png" alt="">
-                                <img src="styles/assets/icone/icon-trash.png" alt="">
-                            </div>
-                        </div>
-                        <div class="manager">
-                            <div class="id">
-                                <span>1</span>
-                            </div>
-                            <div class="name">
-                                <span>Fernanda Caramico</span>
-                            </div>
-                            <div class="role">
-                                <span>Gestora de CRM</span>
-                            </div>
-                            <div class="actions">
-                                <img src="styles/assets/icone/edit-pencil.png" alt="">
-                                <img src="styles/assets/icone/icon-trash.png" alt="">
-                            </div>
-                        </div>
-                        <div class="manager">
-                            <div class="id">
-                                <span>1</span>
-                            </div>
-                            <div class="name">
-                                <span>Fernanda Caramico</span>
-                            </div>
-                            <div class="role">
-                                <span>Gestora de CRM</span>
-                            </div>
-                            <div class="actions">
-                                <img src="styles/assets/icone/edit-pencil.png" alt="">
-                                <img src="styles/assets/icone/icon-trash.png" alt="">
-                            </div>
-                        </div>
-                        <div class="manager">
-                            <div class="id">
-                                <span>1</span>
-                            </div>
-                            <div class="name">
-                                <span>Fernanda Caramico</span>
-                            </div>
-                            <div class="role">
-                                <span>Gestora de CRM</span>
-                            </div>
-                            <div class="actions">
-                                <img src="styles/assets/icone/edit-pencil.png" alt="">
-                                <img src="styles/assets/icone/icon-trash.png" alt="">
-                            </div>
-                        </div>
-                        <div class="manager">
-                            <div class="id">
-                                <span>1</span>
-                            </div>
-                            <div class="name">
-                                <span>Fernanda Caramico</span>
-                            </div>
-                            <div class="role">
-                                <span>Gestora de CRM</span>
-                            </div>
-                            <div class="actions">
-                                <img src="styles/assets/icone/edit-pencil.png" alt="">
-                                <img src="styles/assets/icone/icon-trash.png" alt="">
-                            </div>
-                        </div>
-                    </div>
+                    <table class="managers" id="managers">
+                        <thead class="manager">
+                            <tr class="infos manager">
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Cargo</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                    </table>
                 </div>
             </div>
         </div>
@@ -258,98 +78,19 @@
 
 </html>
 <script>
-    // popup
-    var popup = document.getElementById('popup_fundo');
-    // abrir o popup
-    var botao = document.getElementById('popup_botao');
-    // botao fechar
-    var popup_fechar = document.getElementsByClassName('popup_fechar')[0];
 
-    // abrir com clique
-    botao.addEventListener('click', abrirPopup);
+    function carregarGestor() {
 
-    // fechar com clique no botao
-    popup_fechar.addEventListener('click', fecharPopup);
-
-    // fechar com clique fora do popup
-    window.addEventListener('click', fecharFora);
-
-    // função para abrir com o clique
-    function abrirPopup() {
-        popup.style.display = 'block';
-        body.style.overflowY = "hidden";
-        inp_razao.value = "";
-        inp_email.value = "";
-        inp_cnpj.value = "";
-        inp_senha.value = "";
-        inp_confirmacao.value = "";
     }
 
-    // função para fechar popup com o clique no botão
-    function fecharPopup() {
-        popup.style.display = 'none';
-        body.style.overflowY = "visible";
-    }
-
-    // função para fechar popup se clicar fora
-    function fecharFora(e) {
-        if (e.target == popup) {
-            popup.style.display = 'none';
-            body.style.overflowY = "visible";
-        }
-    }
-
-    var popupLogin = document.getElementById('popup_fundo_login');
-
-    var popup_fechar_login = document.getElementsByClassName('popup_fechar_login')[0];
-
-    popup_fechar_login.addEventListener('click', fecharPopupLogin);
-
-    window.addEventListener('click', fecharForaLogin);
-
-    function abrirLogin() {
-        popup.style.display = 'none';
-        popupLogin.style.display = 'block';
-        body.style.overflowY = "hidden";
-        inp_cnpj1.value = "";
-        inp_email1.value = "";
-        inp_token1.value = "";
-        inp_senha1.value = "";
-    }
-
-    function fecharPopupLogin() {
-        popupLogin.style.display = 'none';
-        body.style.overflowY = "visible";
-    }
-
-    function fecharForaLogin(e) {
-        if (e.target == popupLogin) {
-            popupLogin.style.display = 'none';
-            body.style.overflowY = "visible";
-        }
-    }
-
-    function abrirCadastro() {
-        popupLogin.style.display = 'none';
-        popup.style.display = 'block';
-    }
-</script>
-<script>
-    $("#inp_cnpj").mask("99.999.999/9999-99");
-    $("#inp_cep").mask("99999-999");
-
-    function cadastrar() {
+    function cadastrarGestor() {
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
-        var razaoVar = inp_razao.value;
-        var cnpjVar = inp_cnpj.value;
+        var nomeVar = inp_nome.value;
+        var ultimoNomeVar = inp_ultimo_nome.value;
+        var cargoVar = inp_cargo.value;
         var emailVar = inp_email.value;
-        var cepVar = inp_cep.value;
-        var logVar = inp_logradouro.value;
-        var bairroVar = inp_bairro.value;
-        var numVar = inp_numero.value;
-        var compVar = inp_complemento.value;
         var senhaVar = inp_senha.value;
         var confirmacaoSenhaVar = inp_confirmacao.value;
 
@@ -359,14 +100,8 @@
             return false;
         }
 
-        cnpjVar = cnpjVar.replace("-", "");
-        cnpjVar = cnpjVar.replace("/", "");
-        cnpjVar = cnpjVar.replace(".", "");
-        cnpjVar = cnpjVar.replace(".", "");
-        cepVar = cepVar.replace("-", "");
-
         // Enviando o valor da nova input
-        fetch("/usuarios/cadastrar", {
+        fetch("/usuarios/cadastrarGestor", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -374,14 +109,10 @@
             body: JSON.stringify({
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
-                razaoServer: razaoVar,
-                cnpjServer: cnpjVar,
+                nomeServer: nomeVar,
+                ultimoNomeServer: ultimoNomeVar,
+                cargoServer: cargoVar,
                 emailServer: emailVar,
-                cepServer: cepVar,
-                logServer: logVar,
-                bairroServer: bairroVar,
-                numServer: numVar,
-                compServer: compVar,
                 senhaServer: senhaVar
             })
         }).then(function (resposta) {
@@ -389,11 +120,11 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
+                alert("Cadastro realizado com sucesso!");
 
-                setTimeout(() => {
-                    abrirLogin();
-                }, "2000")
+                setTimeout(function () {
+                    window.location.reload();
+                }, 2000);
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
@@ -403,120 +134,37 @@
         return false;
     }
 
-    function entrar() {
-
-        var cnpjVar = inp_cnpj1.value;
-        var emailVar = inp_email1.value;
-        var tokenVar = inp_token1.value;
-        var senhaVar = inp_senha1.value;
-
-        if (cnpjVar == "" || tokenVar == "" || emailVar == "" || senhaVar == "") {
-            alert("Preencha todos os campos");
-            return false;
-        }
-
-        console.log("FORM LOGIN: ", cnpjVar);
-        console.log("FORM SENHA: ", senhaVar);
-
-        fetch("/usuarios/autenticar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                cnpjServer: cnpjVar,
-                emailServer: emailVar,
-                tokenServer: tokenVar,
-                senhaServer: senhaVar
-            })
-        }).then(function (resposta) {
-            console.log("ESTOU NO THEN DO entrar()!")
-
+    function atualizarFeed() {
+        //aguardar();
+        fetch("/usuarios/listarGestores").then(function (resposta) {
             if (resposta.ok) {
-                console.log(resposta);
+                if (resposta.status == 204) {
+                    throw "Nenhum resultado encontrado!!";
+                }
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
 
-                resposta.json().then(json => {
-                    console.log(json);
-                    console.log(JSON.stringify(json));
-
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.RAZAO_SOCIAL_USUARIO = json.razaoSoc;
-                    sessionStorage.ID_USUARIO = json.idInstituicao;
+                    for (let i = 0; i < resposta.length; i++) {
+                        managers.innerHTML += `
+                                <tbody class="manager">
+                                    <tr class="infos manager">
+                                        <td>${resposta[i].idGestor}</td>
+                                        <td>${resposta[i].nome}</td>
+                                        <td>${resposta[i].cargo}</td>
+                                        <td class="actions">
+                                            <ion-icon name="pencil-outline" size="large"></ion-icon>
+                                            <ion-icon name="trash-outline" size="large"></ion-icon>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            `;
+                    }
                 });
-
             } else {
-
-                console.log("Houve um erro ao tentar realizar o login!");
-
-                resposta.text().then(texto => {
-                    console.error(texto);
-                });
+                throw ('Houve um erro na API!');
             }
-
-        }).catch(function (erro) {
-            console.log(erro);
-        })
-
-        return false;
+        }).catch(function (resposta) {
+            console.error(resposta);
+        });
     }
-
-    function limpa_formulário_cep() {
-        //Limpa valores do formulário de cep.
-        inp_cep.value = "";
-        inp_logradouro.value = "";
-        inp_bairro.value = "";
-        inp_numero.value = "";
-    }
-
-    function meu_callback(conteudo) {
-        if (!("erro" in conteudo)) {
-            //Atualiza os campos com os valores.
-            inp_logradouro.value = conteudo.logradouro;
-            inp_bairro.value = conteudo.bairro;
-        } else {
-            limpa_formulário_cep();
-            alert("CEP não encontrado.");
-        }
-    }
-
-    function pesquisaCep(valor) {
-
-        //Nova variável "cep" somente com dígitos.
-        var cep = valor.replace(/\D/g, '');
-
-        //Verifica se campo cep possui valor informado.
-        if (cep != "") {
-
-            //Expressão regular para validar o CEP.
-            var validacep = /^[0-9]{8}$/;
-
-            //Valida o formato do CEP.
-            if (validacep.test(cep)) {
-
-                //Preenche os campos com "..." enquanto consulta webservice.
-                inp_logradouro.value = "...";
-                inp_bairro.value = "...";
-
-                //Cria um elemento javascript.
-                var script = document.createElement('script');
-
-                //Sincroniza com o callback.
-                script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=meu_callback';
-
-                //Insere script no documento e carrega o conteúdo.
-                document.body.appendChild(script);
-                inp_logradouro.disabled = true;
-                inp_logradouro.style.backgroundColor = "#818181";
-                inp_bairro.disabled = true;
-                inp_bairro.style.backgroundColor = "#818181";
-            } else {
-                //cep é inválido.
-                limpa_formulário_cep();
-                alert("Formato de CEP inválido.");
-            }
-        } else {
-            //cep sem valor, limpa formulário.
-            limpa_formulário_cep();
-        }
-    };
 </script>

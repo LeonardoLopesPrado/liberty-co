@@ -156,7 +156,6 @@
     top: 0;
     height: 100%;
     width: 100%;
-    /* overflow: auto; */
     background-color: rgba(0, 0, 0, 0.5);
     color: black;
 }
@@ -174,7 +173,7 @@
 
 .popup_fechar_login {
     position: absolute;
-    top: 6vw;
+    top: 12vh;
     right: 17vw;
     color: black;
     font-size: 40px;

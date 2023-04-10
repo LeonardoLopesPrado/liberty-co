@@ -1,9 +1,9 @@
 var database = require("../database/config")
 
-function listar() {
+function listarGestores() {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
     var instrucao = `
-        SELECT * FROM usuario;
+        SELECT * FROM Gestor;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -25,8 +25,21 @@ function cadastrar(razaoSoc, cnpj, email, cep, log, bairro, num, comp, senha) {
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
-        INSERT INTO Instituicao (razaoSoc, cnpj, email, cep, logradouro, bairro, numero, complemento, senha) VALUES (
-        '${razaoSoc}', '${cnpj}', '${email}', '${cep}', '${log}', '${bairro}', ${num}, '${comp}', '${senha}');
+        INSERT INTO Instituicao (razaoSoc, cnpj, email, cep, numero, complemento, senha) VALUES (
+        '${razaoSoc}', '${cnpj}', '${email}', '${cep}', ${num}, '${comp}', '${senha}');
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function cadastrarGestor(razaoSoc, cnpj, email, cep, log, bairro, num, comp, senha) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", razaoSoc, cnpj, email, cep, log, bairro, num, comp, senha);
+
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        INSERT INTO Gestor (nome, ultimoNome, cargo, email, senha) VALUES (
+        '${nomeGestor}', '${ultimoNome}', '${cargo}', '${email}','${senha}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -35,5 +48,6 @@ function cadastrar(razaoSoc, cnpj, email, cep, log, bairro, num, comp, senha) {
 module.exports = {
     entrar,
     cadastrar,
-    listar,
+    cadastrarGestor,
+    listarGestores,
 };

@@ -22,34 +22,147 @@
     border-radius: 20px;
 }
 
-.sidebar {
-    padding: 0% 1%;
-    color: white;
-    background-color: #041727;
-    width: 20vw;
-    height: 100vh;
-    text-align: center;
+.logo {
+    padding: 5%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
-.sidebar .company {
-    gap: 20px;
+.logo img {
+    height: 50px;
+}
+
+.content {
+    display: flex;
+}
+
+.sidebar {
+    width: 20%;
+    height: 100vh;
+    background: #041727;
+    transition: all .5s ease;
+}
+
+.sidebar header {
     display: flex;
     flex-direction: column;
+    color: white;
+    text-align: center;
 }
 
-.sidebar .items {
-    height: 35vh;
+.sidebar .infos.empresa {
+    padding: 5% 0%;
+    box-sizing: border-box;
+    border-top: rgba(255, 255, 255, .1) 1px solid;
+    border-bottom: black 1px solid;
 }
 
-.sidebar ul {
-    gap: 20px;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
+.sidebar a {
+    display: block;
+    height: 65px;
+    width: 100%;
+    color: white;
+    line-height: 65px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    text-decoration: none;
+    border-bottom: black 1px solid;
+    border-top: rgba(255, 255, 255, .1) 1px solid;
+    border-left: transparent 5px solid;
+    font-family: 'Open Sans', sans-serif;
+    transition: all .5s ease;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+    border-left: #00ccff 5px solid;
+    color: #00ccffc0;
+}
+
+.sidebar a i {
+    font-size: 23px;
+    margin-right: 16px;
+}
+
+.sidebar a span {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#check {
+    display: none;
+}
+
+.sidebar label #btn,
+.sidebar label #cancel {
+    position: absolute;
     cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    border: #262626 1px solid;
+    margin: 15px 30px;
+    font-size: 28px;
+    background: #262626;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    line-height: 45px;
+    transition: all .5s ease;
 }
 
+.sidebar label #cancel {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#check:checked~.sidebar {
+    left: 0;
+}
+
+#check:checked~label #btn {
+    margin-left: 245px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+@media(max-width: 860px) {
+    .sidebar {
+        height: auto;
+        width: 70px;
+        left: 0;
+        margin: 100px 0;
+    }
+
+    header,
+    #btn,
+    #cancel {
+        display: none;
+    }
+
+    .sidebar span {
+        position: absolute;
+        margin-left: 23px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .sidebar a {
+        height: 60px;
+    }
+
+    .sidebar a i {
+        margin-left: -10px;
+    }
+
+    .sidebar a:hover {
+        width: 200px;
+        background: inherit;
+    }
+
+    .sidebar a:hover span {
+        opacity: 1;
+        visibility: visible;
+    }
+}
