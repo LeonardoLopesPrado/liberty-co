@@ -25,7 +25,7 @@ public class CodigoLooca {
         System.out.println("---------------------CPU-----------------------");
         System.out.println(cpu);
         System.out.println("---------------------Rede-----------------------");
-        System.out.println(rede);
+        System.out.println(rede.getParametros());
 
         System.out.println("---------------------Disco-----------------------");
     // Listando as informações de disco (nome, modelo, serial, tamanho,

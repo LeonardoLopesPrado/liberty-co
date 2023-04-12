@@ -109,8 +109,7 @@
     display: none;
 }
 
-.sidebar label #btn,
-.sidebar label #cancel {
+.sidebar label #btn {
     position: absolute;
     cursor: pointer;
     color: white;
@@ -126,16 +125,8 @@
     transition: all .5s ease;
 }
 
-.sidebar label #cancel {
-    opacity: 0;
-    visibility: hidden;
-}
 
-#check:checked~.sidebar {
-    left: 0;
-}
-
-#check:checked~label #btn {
+label #btn {
     margin-left: 245px;
     opacity: 0;
     visibility: hidden;
@@ -151,8 +142,7 @@
     }
 
     header,
-    #btn,
-    #cancel {
+    #btn {
         display: none;
     }
 
@@ -180,4 +170,8 @@
         opacity: 1;
         visibility: visible;
     }
+}
+
+.container {
+    border: yellow 2px solid;
 }
