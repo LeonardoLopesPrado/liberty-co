@@ -14,7 +14,6 @@
 ::-webkit-scrollbar-thumb {
     background: #1B4364;
     border-radius: 20px;
-
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -139,6 +138,7 @@ label #btn {
         width: 70px;
         left: 0;
         margin: 100px 0;
+
     }
 
     header,
@@ -170,8 +170,23 @@ label #btn {
         opacity: 1;
         visibility: visible;
     }
-}
 
+}
 .container {
     border: yellow 2px solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+.saida {
+    position: relative;
+    bottom: -460px;
+}
+#caixas {
+    
+}
+
+.caixa {
+    border: purple 2px solid;
+
 }
