@@ -185,7 +185,8 @@ label #btn {
 }
 
 .box-container {
-    border: red 2px solid;
+    height: 40vh;
+    border: white 2px solid;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -227,6 +228,8 @@ label #btn {
 }
 
 .box-descricao {
+    width: 60vw;
+    height: 10vh;
     border: red 2px solid;
     display: flex;
     justify-content: center;
@@ -235,7 +238,7 @@ label #btn {
 }
 
 .desc {
-    width: 30%;
+    width: 10%;
     height: 50%;
     background: #1b1b1b;
     margin: 0 5px;
@@ -245,5 +248,5 @@ label #btn {
     align-items: center;
     padding: 5px;
     border-radius: 10px;
-    margin-left: 130%;
+    margin-inline-end: 20px;
 }
