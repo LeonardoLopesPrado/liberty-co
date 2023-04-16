@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="styles/manager-registration.css">
     <link rel="stylesheet" href="styles/sidebar.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <script src="../js/funcoes.js"></script>
+    <script src="js/funcoes.js"></script>
+    <script src="js/manager-registration.js"></script>
     <script src="https://kit.fontawesome.com/9763306bd1.js" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <title>Cadastro de Gestor</title>
 </head>
 
-<body onload="validarSessao(), atualizarFeed()">
+<body onload="validarSessao(), atualizarFeed()" id="body">
     <div class="content">
         <div class="sidebar">
             <header>
@@ -27,11 +28,11 @@
                     <span id="b_cnpj">cnpj</span>
                 </div>
             </header>
-            <a href="#" id="popup_botao">
+            <a href="#" id="popup_botao" onclick="abrirPopup()">
                 <i class="fa-solid fa-user-plus" style="color: #ffffff;"></i>
                 <span id="">Cadastrar gestor</span>
             </a>
-            <a href="#">
+            <a href="#" onclick="limparSessao()">
                 <i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i>
                 <span>Sair</span>
             </a>
@@ -41,7 +42,7 @@
                 <div class="popup_conteudo">
                     <div class="telaCadastro">
                         <div class="formularioCadastro">
-                            <span class="popup_fechar">&times;</span>
+                            <span class="popup_fechar" onclick="fecharPopup()">&times;</span>
                             <div class="conteudoCadastro">
                                 <h1>CADASTRO</h1>
                                 <div class="inputCadastro">
@@ -51,7 +52,7 @@
                                     <input type="email" id="inp_email" placeholder="E-mail">
                                     <input type="password" id="inp_senha" placeholder="Senha">
                                     <input type="password" id="inp_confirmacao" placeholder="Confirmação de Senha">
-                                    <button class="botaoCadastrar" onclick="cadastrar()">CADASTRAR</button>
+                                    <button class="botaoCadastrar" onclick="cadastrarGestor()">CADASTRAR</button>
                                 </div>
                             </div>
                         </div>
@@ -78,11 +79,6 @@
 
 </html>
 <script>
-
-    function carregarGestor() {
-
-    }
-
     function cadastrarGestor() {
 
         //Recupere o valor da nova input pelo nome do id
@@ -94,14 +90,16 @@
         var senhaVar = inp_senha.value;
         var confirmacaoSenhaVar = inp_confirmacao.value;
 
-        if (razaoVar == "" || cnpjVar == "" || emailVar == "" || cepVar == "" || logVar == ""
-            || bairroVar == "" || numVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        var idEmpresa = sessionStorage.ID_EMPRESA;
+
+        if (nomeVar == "" || ultimoNomeVar == "" || cargoVar == "" || emailVar == "" || senhaVar == ""
+            || confirmacaoSenhaVar == "") {
             alert("Preencha todos os campos");
             return false;
         }
 
         // Enviando o valor da nova input
-        fetch("/usuarios/cadastrarGestor", {
+        fetch(`/usuarios/cadastrarGestor/${idEmpresa}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -135,8 +133,10 @@
     }
 
     function atualizarFeed() {
+        let idEmpresa = sessionStorage.ID_EMPRESA
+
         //aguardar();
-        fetch("/usuarios/listarGestores").then(function (resposta) {
+        fetch(`/usuarios/listarGestores/${idEmpresa}`).then(function (resposta) {
             if (resposta.ok) {
                 if (resposta.status == 204) {
                     throw "Nenhum resultado encontrado!!";

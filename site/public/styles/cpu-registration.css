@@ -1,3 +1,30 @@
+.content .container {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+
+.list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: large;
+}
+
+.list .container {
+    height: 80vh;
+    overflow: auto;
+    margin: auto;
+}
+
+.list .container {
+    height: 80vh;
+    overflow: auto;
+    margin: auto;
+}
+
 .list .container .computers {
     height: 80vh;
     gap: 35px;
@@ -10,7 +37,6 @@
 
 .list .container .computers .computer {
     padding: 1% 2%;
-    gap: 30px;
     width: 20vw;
     background-color: #D7E6F2;
     display: flex;
@@ -20,7 +46,28 @@
 
 .list .container .computers .activity {
     color: #019710;
-    align-self: flex-end;
+}
+
+.list .container .computers .cardHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list .container .computers .cardFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.computers .monitor {
+    width: 164px;
+}
+
+.computers .exclamation {
+    position: relative;
+    top: -18vh;
 }
 
 .popup {
@@ -40,7 +87,7 @@
     border-radius: 5%;
     background-color: white;
     margin: 5% auto;
-    width: 30%;
+    width: 50%;
     height: 70%;
     box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.17), 0px 7px 20px 0 rgba(0, 0, 0, 0.17);
     animation-name: abrindoPopup;
@@ -50,7 +97,7 @@
 .popup_fechar {
     position: absolute;
     top: 6vw;
-    right: 37vw;
+    right: 27vw;
     color: black;
     font-size: 40px;
     transition: 0.1s;
@@ -92,6 +139,7 @@
 }
 
 .inputCadastro {
+    width: 100%;
     gap: 20px;
     display: flex;
     flex-direction: column;
@@ -101,6 +149,7 @@
 }
 
 .formularioCadastro input {
+    width: 80%;
     padding: 15px;
     font-size: 15px;
     color: black;
@@ -110,6 +159,7 @@
 }
 
 .conteudoCadastro {
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -35,14 +35,20 @@ CREATE TABLE Telefone (
 
 CREATE TABLE Maquina (
 	idMaquina INT PRIMARY KEY AUTO_INCREMENT,
-    marca VARCHAR(45),
+    hostName VARCHAR(45),
+    nomeArq VARCHAR(45),
+    ultimoNomeArq VARCHAR(45),
     SO VARCHAR(45),
-    senha VARCHAR(45),
+    status BOOLEAN,	
     fkGestor INT, FOREIGN KEY (fkGestor) REFERENCES Gestor(idGestor)
 );
+
 SELECT * FROM Instituicao;
-SELECT * FROM Gestor;
+SELECT * FROM Gestor WHERE fkInstituicao = 1;
+/*TRUNCATE TABLE Gestor;*/
 
 UPDATE Instituicao SET token = 1234 WHERE idInstituicao = 1;
-INSERT INTO Gestor VALUES (null, 'Marcelo', 'Junior', 'sim', 'obvio', '1234', 1);
-INSERT INTO Gestor VALUES (null, 'Marcelo', 'Junior', 'sim', 'obvio', '1234', 1);
+
+INSERT INTO Instituicao VALUES (null, 'Leo', 66666666666666, 'leor', 08210450, 20, 3213, 1234,1234);
+INSERT INTO Gestor VALUES (null, 'Leo', 'Junior', 'sim', 'obvio', '1234', 1);
+INSERT INTO Gestor VALUES (null, 'Marcelo', 'Junior', 'sim', 'obvio', '1234', null);

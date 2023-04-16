@@ -1,7 +1,6 @@
 // sessão
 function validarSessao() {
     // aguardar();
-
     var razaoSoc = sessionStorage.RAZAO_SOCIAL_EMPRESA;
     var cnpj = sessionStorage.CNPJ_EMPRESA;
 
@@ -17,7 +16,31 @@ function validarSessao() {
 
         // finalizarAguardar();
     } else {
-        window.location = "../login.html";
+        window.location = "../index.html";
+    }
+}
+
+function validarSessaoGestor() {
+    // aguardar();
+    var nome = sessionStorage.NOME ;
+    var ultimoNome = sessionStorage.ULTIMO_NOME;
+    var cargo = sessionStorage.CARGO;
+    var empresa = sessionStorage.ID_EMPRESA;
+    console.log(nome);
+
+    var b_nome = document.getElementById("b_nome");
+    var b_ultimoNome = document.getElementById("b_ultimoNome");
+    var b_cargo = document.getElementById("b_cargo");
+
+    if (nome != null && ultimoNome != null && cargo != null && empresa != null) {
+        // alert(`Seja bem-vindo, ${razaoSoc}!`);
+        b_nome.innerHTML = nome;
+        b_ultimoNome.innerHTML = ultimoNome;
+        b_cargo.innerHTML = cargo;
+
+        // finalizarAguardar();
+    } else {
+        window.location = "../index.html";
     }
 }
 
@@ -25,34 +48,6 @@ function limparSessao() {
     // aguardar();
     sessionStorage.clear();
     // finalizarAguardar();
-    window.location = "../login.html";
-}
-
-// carregamento (loading)
-function aguardar() {
-    var divAguardar = document.getElementById("div_aguardar");
-    divAguardar.style.display = "flex";
-}
-
-function finalizarAguardar(texto) {
-    var divAguardar = document.getElementById("div_aguardar");
-    divAguardar.style.display = "none";
-
-    var divErrosLogin = document.getElementById("div_erros_login");
-    if (texto) {
-        divErrosLogin.innerHTML = texto;
-    }
-}
-
-
-// modal
-function mostrarModal() {
-    var divModal = document.getElementById("div_modal");
-    divModal.style.display = "flex";
-}
-
-function fecharModal() {
-    var divModal = document.getElementById("div_modal");
-    divModal.style.display = "none";
+    window.location = "../index.html";
 }
 

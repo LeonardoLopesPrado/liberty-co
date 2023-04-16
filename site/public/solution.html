@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="styles/fotter&navbar.css">
     <link rel="stylesheet" href="styles/response.css">
     <link rel="stylesheet" href="styles/popup_estilo.css">
+    <script src="js/funcoes.js"></script>
+    <script src="js/login&cadastro.js"></script>
     <script src="https://kit.fontawesome.com/d4c883c854.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
@@ -33,7 +35,8 @@
                     </a>
                 </ul>
                 <div class="exit_container">
-                    <button id="popup_botao" class="botao">Login/Cadastro</button>
+                    <button id="popup_botao_login" class="botao" onclick="abrirLogin()">Login</button>
+                    <button id="popup_botao" class="botao" onclick="abrirPopup()">Cadastro</button>
                 </div>
             </div>
         </div>
@@ -55,7 +58,7 @@
             <div class="telaCadastro">
                 <div class="imgCadastro"></div>
                 <div class="formularioCadastro">
-                    <span class="popup_fechar">&times;</span>
+                    <span class="popup_fechar" onclick="fecharPopup()">&times;</span>
                     <div class="conteudoCadastro">
                         <h1>CADASTRO</h1>
                         <div class="inputCadastro">
@@ -70,7 +73,7 @@
                             <!-- <input type="text" id="inp_token" placeholder="Token"> -->
                             <input type="password" id="inp_senha" placeholder="Senha">
                             <input type="password" id="inp_confirmacao" placeholder="Confirmação de Senha">
-                            <button class="botaoCadastrar" onclick="cadastrar()">CADASTRAR</button>
+                            <button class="botaoCadastrar" onclick="cadastrarEmpresa()">CADASTRAR</button>
                         </div>
                         <p>Já tem uma conta? <b><a onclick="abrirLogin()" id="popup_botao"><u>Clique
                                         aqui</u></a></b> para Entrar</p>
@@ -83,11 +86,15 @@
         <div class="popup_conteudo_login">
             <div class="telaLogin">
                 <div class="imgLogin">
-                    <span class="popup_fechar_login">&times;</span>
+                    <span class="popup_fechar_login" onclick="fecharPopupLogin()">&times;</span>
                 </div>
                 <div class="formularioLogin">
+                    <h1>LOGIN</h1>
                     <div class="conteudoLogin">
-                        <h1>LOGIN</h1>
+                        <select id="select" class="select">
+                            <option class="option" value="selEmpresa">Empresa</option>
+                            <option class="option" value="selGestor">Gestor</option>
+                        </select>
                         <div class="inputLogin">
                             <input type="text" id="inp_cnpj1" placeholder="CNPJ">
                             <input type="text" id="inp_email1" placeholder="E-mail">
@@ -231,266 +238,3 @@
 </body>
 
 </html>
-<script>
-    // popup
-    var popup = document.getElementById('popup_fundo');
-    // abrir o popup
-    var botao = document.getElementById('popup_botao');
-    // botao fechar
-    var popup_fechar = document.getElementsByClassName('popup_fechar')[0];
-
-    // abrir com clique
-    botao.addEventListener('click', abrirPopup);
-
-    // fechar com clique no botao
-    popup_fechar.addEventListener('click', fecharPopup);
-
-    // fechar com clique fora do popup
-    window.addEventListener('click', fecharFora);
-
-    // função para abrir com o clique
-    function abrirPopup() {
-        popup.style.display = 'block';
-        body.style.overflowY = "hidden";
-        inp_razao.value = "";
-        inp_email.value = "";
-        inp_cnpj.value = "";
-        inp_senha.value = "";
-        inp_confirmacao.value = "";
-    }
-
-    // função para fechar popup com o clique no botão
-    function fecharPopup() {
-        popup.style.display = 'none';
-        body.style.overflowY = "visible";
-    }
-
-    // função para fechar popup se clicar fora
-    function fecharFora(e) {
-        if (e.target == popup) {
-            popup.style.display = 'none';
-            body.style.overflowY = "visible";
-        }
-    }
-
-    var popupLogin = document.getElementById('popup_fundo_login');
-
-    var popup_fechar_login = document.getElementsByClassName('popup_fechar_login')[0];
-
-    popup_fechar_login.addEventListener('click', fecharPopupLogin);
-
-    window.addEventListener('click', fecharForaLogin);
-
-    function abrirLogin() {
-        popup.style.display = 'none';
-        popupLogin.style.display = 'block';
-        body.style.overflowY = "hidden";
-        inp_cnpj1.value = "";
-        inp_email1.value = "";
-        inp_token1.value = "";
-        inp_senha1.value = "";
-    }
-
-    function fecharPopupLogin() {
-        popupLogin.style.display = 'none';
-        body.style.overflowY = "visible";
-    }
-
-    function fecharForaLogin(e) {
-        if (e.target == popupLogin) {
-            popupLogin.style.display = 'none';
-            body.style.overflowY = "visible";
-        }
-    }
-
-    function abrirCadastro() {
-        popupLogin.style.display = 'none';
-        popup.style.display = 'block';
-    }
-</script>
-<script>
-    $("#inp_cnpj").mask("99.999.999/9999-99");
-    $("#inp_cep").mask("99999-999");
-
-    function cadastrar() {
-
-        //Recupere o valor da nova input pelo nome do id
-        // Agora vá para o método fetch logo abaixo
-        var razaoVar = inp_razao.value;
-        var cnpjVar = inp_cnpj.value;
-        var emailVar = inp_email.value;
-        var cepVar = inp_cep.value;
-        var logVar = inp_logradouro.value;
-        var bairroVar = inp_bairro.value;
-        var numVar = inp_numero.value;
-        var compVar = inp_complemento.value;
-        var senhaVar = inp_senha.value;
-        var confirmacaoSenhaVar = inp_confirmacao.value;
-
-        if (razaoVar == "" || cnpjVar == "" || emailVar == "" || cepVar == "" || logVar == ""
-            || bairroVar == "" || numVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-            alert("Preencha todos os campos");
-            return false;
-        }
-
-        cnpjVar = cnpjVar.replace("-", "");
-        cnpjVar = cnpjVar.replace("/", "");
-        cnpjVar = cnpjVar.replace(".", "");
-        cnpjVar = cnpjVar.replace(".", "");
-        cepVar = cepVar.replace("-", "");
-
-        // Enviando o valor da nova input
-        fetch("/usuarios/cadastrar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
-                razaoServer: razaoVar,
-                cnpjServer: cnpjVar,
-                emailServer: emailVar,
-                cepServer: cepVar,
-                logServer: logVar,
-                bairroServer: bairroVar,
-                numServer: numVar,
-                compServer: compVar,
-                senhaServer: senhaVar
-            })
-        }).then(function (resposta) {
-
-            console.log("resposta: ", resposta);
-
-            if (resposta.ok) {
-                alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
-
-                setTimeout(() => {
-                    abrirLogin();
-                }, "2000")
-            } else {
-                throw ("Houve um erro ao tentar realizar o cadastro!");
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-        });
-        return false;
-    }
-
-    function entrar() {
-
-        var cnpjVar = inp_cnpj1.value;
-        var emailVar = inp_email1.value;
-        var tokenVar = inp_token1.value;
-        var senhaVar = inp_senha1.value;
-
-        if (cnpjVar == "" || tokenVar == "" || emailVar == "" || senhaVar == "") {
-            alert("Preencha todos os campos");
-            return false;
-        }
-
-        console.log("FORM LOGIN: ", cnpjVar);
-        console.log("FORM SENHA: ", senhaVar);
-
-        fetch("/usuarios/autenticar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                cnpjServer: cnpjVar,
-                emailServer: emailVar,
-                tokenServer: tokenVar,
-                senhaServer: senhaVar
-            })
-        }).then(function (resposta) {
-            console.log("ESTOU NO THEN DO entrar()!")
-
-            if (resposta.ok) {
-                console.log(resposta);
-
-                resposta.json().then(json => {
-                    console.log(json);
-                    console.log(JSON.stringify(json));
-
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.RAZAO_SOCIAL_USUARIO = json.razaoSoc;
-                    sessionStorage.ID_USUARIO = json.idInstituicao;
-                });
-
-            } else {
-
-                console.log("Houve um erro ao tentar realizar o login!");
-
-                resposta.text().then(texto => {
-                    console.error(texto);
-                });
-            }
-
-        }).catch(function (erro) {
-            console.log(erro);
-        })
-
-        return false;
-    }
-
-    function limpa_formulário_cep() {
-        //Limpa valores do formulário de cep.
-        inp_cep.value = "";
-        inp_logradouro.value = "";
-        inp_bairro.value = "";
-        inp_numero.value = "";
-    }
-
-    function meu_callback(conteudo) {
-        if (!("erro" in conteudo)) {
-            //Atualiza os campos com os valores.
-            inp_logradouro.value = conteudo.logradouro;
-            inp_bairro.value = conteudo.bairro;
-        } else {
-            limpa_formulário_cep();
-            alert("CEP não encontrado.");
-        }
-    }
-
-    function pesquisaCep(valor) {
-
-        //Nova variável "cep" somente com dígitos.
-        var cep = valor.replace(/\D/g, '');
-
-        //Verifica se campo cep possui valor informado.
-        if (cep != "") {
-
-            //Expressão regular para validar o CEP.
-            var validacep = /^[0-9]{8}$/;
-
-            //Valida o formato do CEP.
-            if (validacep.test(cep)) {
-
-                //Preenche os campos com "..." enquanto consulta webservice.
-                inp_logradouro.value = "...";
-                inp_bairro.value = "...";
-
-                //Cria um elemento javascript.
-                var script = document.createElement('script');
-
-                //Sincroniza com o callback.
-                script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=meu_callback';
-
-                //Insere script no documento e carrega o conteúdo.
-                document.body.appendChild(script);
-                inp_logradouro.disabled = true;
-                inp_logradouro.style.backgroundColor = "#818181";
-                inp_bairro.disabled = true;
-                inp_bairro.style.backgroundColor = "#818181";
-            } else {
-                //cep é inválido.
-                limpa_formulário_cep();
-                alert("Formato de CEP inválido.");
-            }
-        } else {
-            //cep sem valor, limpa formulário.
-            limpa_formulário_cep();
-        }
-    };
-</script>

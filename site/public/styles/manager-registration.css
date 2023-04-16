@@ -19,8 +19,8 @@
     margin: auto;
 }
 
-
 .list .managers {
+    height: 20px;
     width: 100%;
     text-align: center;
 }
@@ -29,11 +29,6 @@
     background-color: #D7E6F2;
     border-radius: 10px;
     overflow: auto;
-}
-
-.list .manager .actions {
-    /* display: flex; */
-    /* gap: 30px; */
 }
 
 .popup {

@@ -7,12 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/cpu-registration.css">
     <link rel="stylesheet" href="styles/sidebar.css">
+    <script src="js/funcoes.js"></script>
+    <script src="js/cpu-registration.js"></script>
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/9763306bd1.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <title>Cadastro de Máquina</title>
 </head>
 
-<body>
+<body onload="validarSessaoGestor(), listarMaquinas()" id="body">
     <div class="content">
         <div class="sidebar">
             <header>
@@ -20,15 +24,15 @@
                     <img src="styles/assets/logo/logo_side.png" alt="LogoLibertyCo">
                 </div>
                 <div class="infos">
-                    <h2>FACULDADE DE TECNOLOGIA BANDEIRANTES</h2>
-                    <span>07.165.496/0001-00</span>
+                    <h2 id="b_nome">nome</h2><h2 id="b_ultimoNome">ultimoNome</h2>
+                    <span id="b_cargo">cargo</span>
                 </div>
             </header>
-            <a href="#" id="popup_botao">
-                <i class="fa-solid fa-user-plus" style="color: #ffffff;"></i>
-                <span>Cadastrar gestor</span>
+            <a href="#" id="popup_botao" onclick="abrirPopup()">
+                <i class="fa-solid fa-display-medical" style="color: #ffffff;"></i>
+                <span>Cadastrar Máquina</span>
             </a>
-            <a href="#">
+            <a href="#" onclick="limparSessao()">
                 <i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i>
                 <span>Sair</span>
             </a>
@@ -38,16 +42,15 @@
                 <div class="popup_conteudo">
                     <div class="telaCadastro">
                         <div class="formularioCadastro">
-                            <span class="popup_fechar">&times;</span>
+                            <span class="popup_fechar" onclick="fecharPopup()">&times;</span>
                             <div class="conteudoCadastro">
-                                <h1>CADASTRO</h1>
+                                <h1>CADASTRO DE MÁQ.</h1>
                                 <div class="inputCadastro">
-                                    <input type="text" id="inp_nome" placeholder="Nome">
-                                    <input type="text" id="inp_sobrenome" placeholder="Sobrenome">
-                                    <input type="text" id="inp_email" placeholder="E-mail">
-                                    <input type="password" id="inp_senha" placeholder="Senha">
-                                    <input type="password" id="inp_confirmacao" placeholder="Confirmação de Senha">
-                                    <button class="botaoCadastrar" onclick="cadastrar()">CADASTRAR</button>
+                                    <input type="text" id="inp_host" placeholder="Host Name">
+                                    <input type="text" id="inp_nomeArq" placeholder="Nome do Arquiteto">
+                                    <input type="text" id="inp_ultimo_nome_arq" placeholder="Ultimo Nome do Arquiteto">
+                                    <input type="text" id="inp_SO" placeholder="Sistema Operacional">
+                                    <button class="botaoCadastrar" onclick="cadastrarMaquina()">CADASTRAR</button>
                                 </div>
                             </div>
                         </div>
@@ -56,55 +59,21 @@
             </div>
             <div class="list">
                 <div class="container">
-                    <div class="computers">
+                    <div class="computers" id="computers">
                         <div class="computer">
-                            <div class="activity">
-                                <small>Ativo</small>
+                            <div class="cardHeader">
+                                <div class="actions">
+                                    <ion-icon name="pencil-outline" size="large"></ion-icon>
+                                    <ion-icon name="trash-outline" size="large"></ion-icon>
+                                </div>
+                                <div class="activity">
+                                    <small>Ativo</small>
+                                </div>
                             </div>
-                            <img src="styles/assets/icone/+monitor.png" alt="">
-                            <span>Modelo da Máquina</span>
-                        </div>
-                        <div class="computer">
-                            <div class="activity">
-                                <small>Ativo</small>
+                            <div class="cardFooter">
+                                <img class="monitor" src="styles/assets/icone/!!monitor.png">
+                                <span>Modelo da Máquina</span>
                             </div>
-                            <img src="styles/assets/icone/+monitor.png" alt="">
-                            <span>Modelo da Máquina</span>
-                        </div>
-                        <div class="computer">
-                            <div class="activity">
-                                <small>Ativo</small>
-                            </div>
-                            <img src="styles/assets/icone/+monitor.png" alt="">
-                            <span>Modelo da Máquina</span>
-                        </div>
-                        <div class="computer">
-                            <div class="activity">
-                                <small>Ativo</small>
-                            </div>
-                            <img src="styles/assets/icone/+monitor.png" alt="">
-                            <span>Modelo da Máquina</span>
-                        </div>
-                        <div class="computer">
-                            <div class="activity">
-                                <small>Ativo</small>
-                            </div>
-                            <img src="styles/assets/icone/+monitor.png" alt="">
-                            <span>Modelo da Máquina</span>
-                        </div>
-                        <div class="computer">
-                            <div class="activity">
-                                <small>Ativo</small>
-                            </div>
-                            <img src="styles/assets/icone/+monitor.png" alt="">
-                            <span>Modelo da Máquina</span>
-                        </div>
-                        <div class="computer">
-                            <div class="activity">
-                                <small>Ativo</small>
-                            </div>
-                            <img src="styles/assets/icone/+monitor.png" alt="">
-                            <span>Modelo da Máquina</span>
                         </div>
                     </div>
                 </div>
@@ -114,266 +83,3 @@
 </body>
 
 </html>
-<script>
-    // popup
-    var popup = document.getElementById('popup_fundo');
-    // abrir o popup
-    var botao = document.getElementById('popup_botao');
-    // botao fechar
-    var popup_fechar = document.getElementsByClassName('popup_fechar')[0];
-
-    // abrir com clique
-    botao.addEventListener('click', abrirPopup);
-
-    // fechar com clique no botao
-    popup_fechar.addEventListener('click', fecharPopup);
-
-    // fechar com clique fora do popup
-    window.addEventListener('click', fecharFora);
-
-    // função para abrir com o clique
-    function abrirPopup() {
-        popup.style.display = 'block';
-        body.style.overflowY = "hidden";
-        inp_razao.value = "";
-        inp_email.value = "";
-        inp_cnpj.value = "";
-        inp_senha.value = "";
-        inp_confirmacao.value = "";
-    }
-
-    // função para fechar popup com o clique no botão
-    function fecharPopup() {
-        popup.style.display = 'none';
-        body.style.overflowY = "visible";
-    }
-
-    // função para fechar popup se clicar fora
-    function fecharFora(e) {
-        if (e.target == popup) {
-            popup.style.display = 'none';
-            body.style.overflowY = "visible";
-        }
-    }
-
-    var popupLogin = document.getElementById('popup_fundo_login');
-
-    var popup_fechar_login = document.getElementsByClassName('popup_fechar_login')[0];
-
-    popup_fechar_login.addEventListener('click', fecharPopupLogin);
-
-    window.addEventListener('click', fecharForaLogin);
-
-    function abrirLogin() {
-        popup.style.display = 'none';
-        popupLogin.style.display = 'block';
-        body.style.overflowY = "hidden";
-        inp_cnpj1.value = "";
-        inp_email1.value = "";
-        inp_token1.value = "";
-        inp_senha1.value = "";
-    }
-
-    function fecharPopupLogin() {
-        popupLogin.style.display = 'none';
-        body.style.overflowY = "visible";
-    }
-
-    function fecharForaLogin(e) {
-        if (e.target == popupLogin) {
-            popupLogin.style.display = 'none';
-            body.style.overflowY = "visible";
-        }
-    }
-
-    function abrirCadastro() {
-        popupLogin.style.display = 'none';
-        popup.style.display = 'block';
-    }
-</script>
-<script>
-    $("#inp_cnpj").mask("99.999.999/9999-99");
-    $("#inp_cep").mask("99999-999");
-
-    function cadastrar() {
-
-        //Recupere o valor da nova input pelo nome do id
-        // Agora vá para o método fetch logo abaixo
-        var razaoVar = inp_razao.value;
-        var cnpjVar = inp_cnpj.value;
-        var emailVar = inp_email.value;
-        var cepVar = inp_cep.value;
-        var logVar = inp_logradouro.value;
-        var bairroVar = inp_bairro.value;
-        var numVar = inp_numero.value;
-        var compVar = inp_complemento.value;
-        var senhaVar = inp_senha.value;
-        var confirmacaoSenhaVar = inp_confirmacao.value;
-
-        if (razaoVar == "" || cnpjVar == "" || emailVar == "" || cepVar == "" || logVar == ""
-            || bairroVar == "" || numVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-            alert("Preencha todos os campos");
-            return false;
-        }
-
-        cnpjVar = cnpjVar.replace("-", "");
-        cnpjVar = cnpjVar.replace("/", "");
-        cnpjVar = cnpjVar.replace(".", "");
-        cnpjVar = cnpjVar.replace(".", "");
-        cepVar = cepVar.replace("-", "");
-
-        // Enviando o valor da nova input
-        fetch("/usuarios/cadastrar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
-                razaoServer: razaoVar,
-                cnpjServer: cnpjVar,
-                emailServer: emailVar,
-                cepServer: cepVar,
-                logServer: logVar,
-                bairroServer: bairroVar,
-                numServer: numVar,
-                compServer: compVar,
-                senhaServer: senhaVar
-            })
-        }).then(function (resposta) {
-
-            console.log("resposta: ", resposta);
-
-            if (resposta.ok) {
-                alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
-
-                setTimeout(() => {
-                    abrirLogin();
-                }, "2000")
-            } else {
-                throw ("Houve um erro ao tentar realizar o cadastro!");
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-        });
-        return false;
-    }
-
-    function entrar() {
-
-        var cnpjVar = inp_cnpj1.value;
-        var emailVar = inp_email1.value;
-        var tokenVar = inp_token1.value;
-        var senhaVar = inp_senha1.value;
-
-        if (cnpjVar == "" || tokenVar == "" || emailVar == "" || senhaVar == "") {
-            alert("Preencha todos os campos");
-            return false;
-        }
-
-        console.log("FORM LOGIN: ", cnpjVar);
-        console.log("FORM SENHA: ", senhaVar);
-
-        fetch("/usuarios/autenticar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                cnpjServer: cnpjVar,
-                emailServer: emailVar,
-                tokenServer: tokenVar,
-                senhaServer: senhaVar
-            })
-        }).then(function (resposta) {
-            console.log("ESTOU NO THEN DO entrar()!")
-
-            if (resposta.ok) {
-                console.log(resposta);
-
-                resposta.json().then(json => {
-                    console.log(json);
-                    console.log(JSON.stringify(json));
-
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.RAZAO_SOCIAL_USUARIO = json.razaoSoc;
-                    sessionStorage.ID_USUARIO = json.idInstituicao;
-                });
-
-            } else {
-
-                console.log("Houve um erro ao tentar realizar o login!");
-
-                resposta.text().then(texto => {
-                    console.error(texto);
-                });
-            }
-
-        }).catch(function (erro) {
-            console.log(erro);
-        })
-
-        return false;
-    }
-
-    function limpa_formulário_cep() {
-        //Limpa valores do formulário de cep.
-        inp_cep.value = "";
-        inp_logradouro.value = "";
-        inp_bairro.value = "";
-        inp_numero.value = "";
-    }
-
-    function meu_callback(conteudo) {
-        if (!("erro" in conteudo)) {
-            //Atualiza os campos com os valores.
-            inp_logradouro.value = conteudo.logradouro;
-            inp_bairro.value = conteudo.bairro;
-        } else {
-            limpa_formulário_cep();
-            alert("CEP não encontrado.");
-        }
-    }
-
-    function pesquisaCep(valor) {
-
-        //Nova variável "cep" somente com dígitos.
-        var cep = valor.replace(/\D/g, '');
-
-        //Verifica se campo cep possui valor informado.
-        if (cep != "") {
-
-            //Expressão regular para validar o CEP.
-            var validacep = /^[0-9]{8}$/;
-
-            //Valida o formato do CEP.
-            if (validacep.test(cep)) {
-
-                //Preenche os campos com "..." enquanto consulta webservice.
-                inp_logradouro.value = "...";
-                inp_bairro.value = "...";
-
-                //Cria um elemento javascript.
-                var script = document.createElement('script');
-
-                //Sincroniza com o callback.
-                script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=meu_callback';
-
-                //Insere script no documento e carrega o conteúdo.
-                document.body.appendChild(script);
-                inp_logradouro.disabled = true;
-                inp_logradouro.style.backgroundColor = "#818181";
-                inp_bairro.disabled = true;
-                inp_bairro.style.backgroundColor = "#818181";
-            } else {
-                //cep é inválido.
-                limpa_formulário_cep();
-                alert("Formato de CEP inválido.");
-            }
-        } else {
-            //cep sem valor, limpa formulário.
-            limpa_formulário_cep();
-        }
-    };
-</script>
