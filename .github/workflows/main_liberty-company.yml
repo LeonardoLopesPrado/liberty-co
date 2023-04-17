@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'LIBERTY-COMPANY'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D0603C739DE64A678480635948C18097 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_21A33EEAD35B4F2284C55EC73C46A38A }}
           package: .
