@@ -5,6 +5,6 @@
   "scripts": {
     "start": "node ./site/app.js",
     "dev": "cd site && npm run dev",
-    "postinstall": "npm start"
+    "postinstall": "cd site && npm install"
   }
 }
